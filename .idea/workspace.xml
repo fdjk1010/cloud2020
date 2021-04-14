@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/demo/springcloud/lb/LoadBalancer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/demo/springcloud/lb/MyLB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/cloud-consumer-feign-order80.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/demo/springcloud/OrderFeignMain80.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/demo/springcloud/config/FeignConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/demo/springcloud/controller/OrderFeignController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/demo/springcloud/service/PaymentFeignService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/demo/springcloud/OrderMain80.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/demo/springcloud/OrderMain80.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/demo/springcloud/config/ApplicationContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/demo/springcloud/config/ApplicationContextConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/demo/springcloud/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/demo/springcloud/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/demo/springcloud/module/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/demo/springcloud/module/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +91,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderMain80">
-    <configuration name="EurekaMain7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.OrderFeignMain80">
+    <configuration name="EurekaMain7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cloud-eureka-server7001" />
       <extension name="coverage">
         <pattern>
@@ -100,20 +105,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaMain7002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cloud-eureka-server7002" />
+    <configuration name="OrderFeignMain80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="cloud-consumer-feign-order80" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.demo.springcloud.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.springcloud.EurekaMain7002" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.springcloud.OrderFeignMain80" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderMain80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderMain80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cloud-consumer-order80" />
       <extension name="coverage">
         <pattern>
@@ -126,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderZKMain80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderZKMain80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cloud-consumerzk-order80" />
       <extension name="coverage">
         <pattern>
@@ -146,7 +151,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentMain8002 (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentMain8002 (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cloud-provider-payment8002" />
       <extension name="coverage">
         <pattern>
@@ -159,23 +164,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PaymentMain8004" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-provider-payment8004" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.springcloud.PaymentMain8004" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Spring Boot.PaymentMain8001" />
       <item itemvalue="Spring Boot.EurekaMain7001" />
       <item itemvalue="Spring Boot.PaymentMain8002 (1)" />
       <item itemvalue="Spring Boot.OrderZKMain80" />
-      <item itemvalue="Spring Boot.EurekaMain7002" />
       <item itemvalue="Spring Boot.OrderMain80" />
+      <item itemvalue="Spring Boot.PaymentMain8004" />
+      <item itemvalue="Spring Boot.OrderFeignMain80" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.OrderMain80" />
-        <item itemvalue="Spring Boot.OrderZKMain80" />
-        <item itemvalue="Spring Boot.PaymentMain8002 (1)" />
-        <item itemvalue="Spring Boot.EurekaMain7001" />
-        <item itemvalue="Spring Boot.EurekaMain7002" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -224,7 +228,7 @@
       <workItem from="1618221213111" duration="92000" />
       <workItem from="1618275730332" duration="5279000" />
       <workItem from="1618295285033" duration="4989000" />
-      <workItem from="1618361995590" duration="8917000" />
+      <workItem from="1618361995590" duration="14411000" />
     </task>
     <task id="LOCAL-00001" summary="cloud-api-commons&#10;cloud-provider-payment8001">
       <created>1618132179045</created>
@@ -310,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618366732220</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="cloud-consumer-order80:&#10;    ribbon手写轮询负载的算法">
+      <created>1618381500314</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1618381500314</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,13 +339,18 @@
     <MESSAGE value="cloud-provider-payment8004:&#10;业务代码上传，测试zookeeper" />
     <MESSAGE value="cloud-consumerzk-order80:&#10;    测试zookeeper,互相调用，替代eureka" />
     <MESSAGE value="cloud-consumer-order80:&#10;    ribbon自定义轮询方式的实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="cloud-consumer-order80:&#10;    ribbon自定义轮询方式的实现" />
+    <MESSAGE value="cloud-consumer-order80:&#10;    ribbon手写轮询负载的算法" />
+    <option name="LAST_COMMIT_MESSAGE" value="cloud-consumer-order80:&#10;    ribbon手写轮询负载的算法" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="279" key="#Project_Structure" timestamp="1618370026430">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="0" y="279" key="#Project_Structure/0.0.1500.960@0.0.1500.960" timestamp="1618370026430" />
+    <state x="260" y="238" width="1151" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618383662242">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="260" y="238" width="1151" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1618383662242" />
     <state x="0" y="381" key="#com.intellij.ide.util.MemberChooser" timestamp="1618370110453">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -343,10 +359,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1500.960@0.0.1500.960" timestamp="1618370169710" />
-    <state x="397" y="65" key="CommitChangelistDialog2" timestamp="1618366730681">
+    <state x="385" y="67" key="CommitChangelistDialog2" timestamp="1618381498685">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="397" y="65" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618366730681" />
+    <state x="385" y="67" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618381498685" />
     <state x="536" y="251" width="892" height="539" key="DiffContextDialog" timestamp="1618192491508">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -355,22 +371,22 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="764" y="276" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1618213723309" />
-    <state width="770" height="356" key="GridCell.Tab.0.bottom" timestamp="1618381457718">
+    <state width="770" height="347" key="GridCell.Tab.0.bottom" timestamp="1618387226357">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="770" height="356" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618381457718" />
-    <state width="770" height="356" key="GridCell.Tab.0.center" timestamp="1618381457718">
+    <state width="770" height="347" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618387226357" />
+    <state width="770" height="347" key="GridCell.Tab.0.center" timestamp="1618387226357">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="770" height="356" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618381457718" />
-    <state width="770" height="356" key="GridCell.Tab.0.left" timestamp="1618381457718">
+    <state width="770" height="347" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618387226357" />
+    <state width="770" height="347" key="GridCell.Tab.0.left" timestamp="1618387226357">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="770" height="356" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618381457718" />
-    <state width="770" height="356" key="GridCell.Tab.0.right" timestamp="1618381457718">
+    <state width="770" height="347" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618387226357" />
+    <state width="770" height="347" key="GridCell.Tab.0.right" timestamp="1618387226357">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="770" height="356" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618381457718" />
+    <state width="770" height="347" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618387226357" />
     <state x="0" y="286" key="Registry" timestamp="1618219732716">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -379,10 +395,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="274" y="235" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1618219721186" />
-    <state x="343" y="202" key="Vcs.Push.Dialog.v2" timestamp="1618366743704">
+    <state x="343" y="202" key="Vcs.Push.Dialog.v2" timestamp="1618381503498">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618366743704" />
+    <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618381503498" />
     <state x="434" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1618362001544">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -395,10 +411,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="729" y="320" width="641" height="534" key="find.popup/0.0.1500.960@0.0.1500.960" timestamp="1618211047439" />
-    <state x="129" y="201" width="1266" height="608" key="new project wizard" timestamp="1618297798022">
+    <state x="194" y="153" width="1266" height="608" key="new project wizard" timestamp="1618382466006">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="129" y="201" width="1266" height="608" key="new project wizard/0.0.1500.960@0.0.1500.960" timestamp="1618297798022" />
+    <state x="194" y="153" width="1266" height="608" key="new project wizard/0.0.1500.960@0.0.1500.960" timestamp="1618382466006" />
     <state x="454" y="107" key="refactoring.ChangeSignatureDialog" timestamp="1618131518885">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
