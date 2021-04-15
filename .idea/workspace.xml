@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/cloud-consumer-feign-hystrix-order80.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/com/demo/springcloud/OrderHystrixMain80.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/com/demo/springcloud/controller/OrderHystirxController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/com/demo/springcloud/service/PaymentHystrixService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/cloud-provider-hystrix-payment8001.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/com/demo/springcloud/PaymentHystrixMain8001.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/com/demo/springcloud/module/controller/PaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/com/demo/springcloud/module/service/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/com/demo/springcloud/module/service/impl/PaymentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-eureka-server7001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-eureka-server7001/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/com/demo/springcloud/OrderHystrixMain80.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/com/demo/springcloud/OrderHystrixMain80.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/com/demo/springcloud/controller/OrderHystirxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/com/demo/springcloud/controller/OrderHystirxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/com/demo/springcloud/service/PaymentHystrixService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/com/demo/springcloud/service/PaymentHystrixService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/com/demo/springcloud/PaymentHystrixMain8001.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/com/demo/springcloud/PaymentHystrixMain8001.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/com/demo/springcloud/module/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/com/demo/springcloud/module/service/impl/PaymentServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +87,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderHystrixMain80">
+  <component name="RunManager" selected="Spring Boot.OrderFeignMain80">
     <configuration name="EurekaMain7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cloud-eureka-server7001" />
       <extension name="coverage">
@@ -131,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderHystrixMain80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderHystrixMain80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cloud-consumer-feign-hystrix-order80" />
       <extension name="coverage">
         <pattern>
@@ -170,7 +160,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentHystrixMain8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentHystrixMain8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cloud-provider-hystrix-payment8001" />
       <extension name="coverage">
         <pattern>
@@ -219,21 +209,15 @@
       <item itemvalue="Spring Boot.PaymentMain8004" />
       <item itemvalue="Spring Boot.OrderFeignMain80" />
       <item itemvalue="Spring Boot.EurekaMain7002" />
-      <item itemvalue="Spring Boot.PaymentHystrixMain8001" />
       <item itemvalue="Spring Boot.OrderHystrixMain80" />
+      <item itemvalue="Spring Boot.PaymentHystrixMain8001" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.OrderHystrixMain80" />
-        <item itemvalue="Spring Boot.PaymentHystrixMain8001" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.39247313" />
+          <option name="contentProportion" value="0.26806083" />
           <treeState>
             <expand>
               <path>
@@ -277,7 +261,8 @@
       <workItem from="1618275730332" duration="5279000" />
       <workItem from="1618295285033" duration="4989000" />
       <workItem from="1618361995590" duration="18874000" />
-      <workItem from="1618449206423" duration="3983000" />
+      <workItem from="1618449206423" duration="7095000" />
+      <workItem from="1618467580462" duration="1978000" />
     </task>
     <task id="LOCAL-00001" summary="cloud-api-commons&#10;cloud-provider-payment8001">
       <created>1618132179045</created>
@@ -377,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618387322836</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="cloud-consumer-feign-hystrix-order80:&#10;cloud-provider-hystrix-payment8001:&#10;   模拟高并发超时访问，压力测试配合JMeter工具">
+      <created>1618454029101</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1618454029104</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,17 +402,18 @@
     <MESSAGE value="cloud-consumer-order80:&#10;    ribbon自定义轮询方式的实现" />
     <MESSAGE value="cloud-consumer-order80:&#10;    ribbon手写轮询负载的算法" />
     <MESSAGE value="cloud-consumer-feign-order80:&#10;  OpenFeign引入&#10;  OpenFeign超时控制&#10;  OpenFeign日志打印功能 FULL开启" />
-    <option name="LAST_COMMIT_MESSAGE" value="cloud-consumer-feign-order80:&#10;  OpenFeign引入&#10;  OpenFeign超时控制&#10;  OpenFeign日志打印功能 FULL开启" />
+    <MESSAGE value="cloud-consumer-feign-hystrix-order80:&#10;cloud-provider-hystrix-payment8001:&#10;   模拟高并发超时访问，压力测试配合JMeter工具" />
+    <option name="LAST_COMMIT_MESSAGE" value="cloud-consumer-feign-hystrix-order80:&#10;cloud-provider-hystrix-payment8001:&#10;   模拟高并发超时访问，压力测试配合JMeter工具" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="279" key="#Project_Structure" timestamp="1618370026430">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="0" y="279" key="#Project_Structure/0.0.1500.960@0.0.1500.960" timestamp="1618370026430" />
-    <state x="260" y="238" width="1151" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618383662242">
+    <state x="260" y="238" width="1151" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618468215677">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="260" y="238" width="1151" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1618383662242" />
+    <state x="260" y="238" width="1151" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1618468215677" />
     <state x="0" y="381" key="#com.intellij.ide.util.MemberChooser" timestamp="1618370110453">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -429,10 +422,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1500.960@0.0.1500.960" timestamp="1618370169710" />
-    <state x="360" y="22" key="CommitChangelistDialog2" timestamp="1618387321488">
+    <state x="160" y="5" width="1225" height="872" key="CommitChangelistDialog2" timestamp="1618454026094">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="360" y="22" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618387321488" />
+    <state x="160" y="5" width="1225" height="872" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618454026094" />
     <state x="536" y="251" width="892" height="539" key="DiffContextDialog" timestamp="1618192491508">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -441,22 +434,22 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="764" y="276" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1618213723309" />
-    <state width="564" height="178" key="GridCell.Tab.0.bottom" timestamp="1618453912616">
+    <state width="769" height="263" key="GridCell.Tab.0.bottom" timestamp="1618469762314">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="564" height="178" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618453912616" />
-    <state width="564" height="178" key="GridCell.Tab.0.center" timestamp="1618453912615">
+    <state width="769" height="263" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618469762314" />
+    <state width="769" height="263" key="GridCell.Tab.0.center" timestamp="1618469762314">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="564" height="178" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618453912615" />
-    <state width="564" height="178" key="GridCell.Tab.0.left" timestamp="1618453912614">
+    <state width="769" height="263" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618469762314" />
+    <state width="769" height="263" key="GridCell.Tab.0.left" timestamp="1618469762313">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="564" height="178" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618453912614" />
-    <state width="564" height="178" key="GridCell.Tab.0.right" timestamp="1618453912615">
+    <state width="769" height="263" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618469762313" />
+    <state width="769" height="263" key="GridCell.Tab.0.right" timestamp="1618469762314">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="564" height="178" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618453912615" />
+    <state width="769" height="263" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618469762314" />
     <state x="0" y="286" key="Registry" timestamp="1618219732716">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -465,14 +458,14 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="274" y="235" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1618219721186" />
-    <state x="343" y="202" key="Vcs.Push.Dialog.v2" timestamp="1618387325859">
+    <state x="343" y="202" key="Vcs.Push.Dialog.v2" timestamp="1618454033452">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618387325859" />
-    <state x="434" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1618449205339">
+    <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618454033452" />
+    <state x="434" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1618467988588">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="434" y="304" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1618449205339" />
+    <state x="434" y="304" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1618467988588" />
     <state x="546" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618191397205">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
