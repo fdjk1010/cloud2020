@@ -1,0 +1,15 @@
+package com.demo.springcloud;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * @author lzy
+ * @date 2021/4/14 17:11
+ */
+@SpringBootApplication
+public class PaymentHystrixMain8001 {
+    public static void main(String[] args) {
+        SpringApplication.run(PaymentHystrixMain8001.class,args);
+    }
+}
