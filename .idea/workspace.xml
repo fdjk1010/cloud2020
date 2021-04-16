@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/test/java/T2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/java/com/demo/springcloud/filter/MyLogGateWayFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/resources/application.yml" afterDir="false" />
     </list>
@@ -303,7 +303,7 @@
       <workItem from="1618467580462" duration="9275000" />
       <workItem from="1618534787573" duration="579000" />
       <workItem from="1618542759158" duration="1029000" />
-      <workItem from="1618553452479" duration="7255000" />
+      <workItem from="1618553452479" duration="8252000" />
     </task>
     <task id="LOCAL-00001" summary="cloud-api-commons&#10;cloud-provider-payment8001">
       <created>1618132179045</created>
@@ -473,7 +473,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618559317142</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="cloud-gateway-gateway9527:&#10;      yml配置predicates属性断言">
+      <created>1618560926776</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1618560926776</updated>
+    </task>
+    <task id="LOCAL-00026" summary="cloud-gateway-gateway9527:&#10;      yml配置predicates属性断言匹配规则">
+      <created>1618560966353</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1618560966353</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +529,9 @@
     <MESSAGE value="cloud-gateway-gateway9527:&#10;   gateway网关搭建" />
     <MESSAGE value="cloud-gateway-gateway9527:&#10;                 gateway网关搭建代码方式，上一版是yml方式" />
     <MESSAGE value="cloud-gateway-gateway9527:&#10;      yml配置通过动态路由平衡，调用eureka的负载均衡" />
-    <option name="LAST_COMMIT_MESSAGE" value="cloud-gateway-gateway9527:&#10;      yml配置通过动态路由平衡，调用eureka的负载均衡" />
+    <MESSAGE value="cloud-gateway-gateway9527:&#10;      yml配置predicates属性断言" />
+    <MESSAGE value="cloud-gateway-gateway9527:&#10;      yml配置predicates属性断言匹配规则" />
+    <option name="LAST_COMMIT_MESSAGE" value="cloud-gateway-gateway9527:&#10;      yml配置predicates属性断言匹配规则" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="279" key="#Project_Structure" timestamp="1618370026430">
@@ -526,18 +542,18 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="260" y="238" width="1151" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1618553896406" />
-    <state x="0" y="381" key="#com.intellij.ide.util.MemberChooser" timestamp="1618470906880">
+    <state x="0" y="381" key="#com.intellij.ide.util.MemberChooser" timestamp="1618561460684">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="0" y="381" key="#com.intellij.ide.util.MemberChooser/0.0.1500.960@0.0.1500.960" timestamp="1618470906880" />
+    <state x="0" y="381" key="#com.intellij.ide.util.MemberChooser/0.0.1500.960@0.0.1500.960" timestamp="1618561460684" />
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1618370169710">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1500.960@0.0.1500.960" timestamp="1618370169710" />
-    <state x="275" y="80" width="1225" height="872" key="CommitChangelistDialog2" timestamp="1618560925127">
+    <state x="275" y="80" width="1225" height="872" key="CommitChangelistDialog2" timestamp="1618560965218">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="275" y="80" width="1225" height="872" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618560925127" />
+    <state x="275" y="80" width="1225" height="872" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618560965218" />
     <state x="536" y="251" width="892" height="539" key="DiffContextDialog" timestamp="1618192491508">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -546,22 +562,22 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="764" y="276" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1618213723309" />
-    <state width="981" height="161" key="GridCell.Tab.0.bottom" timestamp="1618560895958">
+    <state width="981" height="217" key="GridCell.Tab.0.bottom" timestamp="1618561917140">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="981" height="161" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618560895958" />
-    <state width="981" height="161" key="GridCell.Tab.0.center" timestamp="1618560895957">
+    <state width="981" height="217" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618561917140" />
+    <state width="981" height="217" key="GridCell.Tab.0.center" timestamp="1618561917140">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="981" height="161" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618560895957" />
-    <state width="981" height="161" key="GridCell.Tab.0.left" timestamp="1618560895956">
+    <state width="981" height="217" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618561917140" />
+    <state width="981" height="217" key="GridCell.Tab.0.left" timestamp="1618561917140">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="981" height="161" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618560895956" />
-    <state width="981" height="161" key="GridCell.Tab.0.right" timestamp="1618560895957">
+    <state width="981" height="217" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618561917140" />
+    <state width="981" height="217" key="GridCell.Tab.0.right" timestamp="1618561917140">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="981" height="161" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618560895957" />
+    <state width="981" height="217" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618561917140" />
     <state x="0" y="286" key="Registry" timestamp="1618219732716">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -570,10 +586,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="274" y="111" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1618476095522" />
-    <state x="343" y="202" key="Vcs.Push.Dialog.v2" timestamp="1618560930633">
+    <state x="343" y="202" key="Vcs.Push.Dialog.v2" timestamp="1618560967989">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618560930633" />
+    <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618560967989" />
     <state x="434" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1618553453490">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
