@@ -34,6 +34,7 @@
             <scope>compile</scope>
         </dependency>
 
+        <!--图形化监控必须要web，actuator-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
