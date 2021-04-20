@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cloud-stream-rabbitmq-consumer8802/src/main/java/com/demo/springcloud/StreamMain8802.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-stream-rabbitmq-consumer8802/src/main/java/com/demo/springcloud/controller/ReceiveMessageListennerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-stream-rabbitmq-consumer8802/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-stream-rabbitmq-consumer8802/cloud-stream-rabbitmq-consumer8802.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-stream-rabbitmq-consumer8802/cloud-stream-rabbitmq-consumer8802.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-stream-rabbitmq-consumer8802/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-stream-rabbitmq-consumer8802/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-stream-rabbitmq-provider8801/src/main/java/com/demo/springcloud/service/impl/MessageProviderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-stream-rabbitmq-provider8801/src/main/java/com/demo/springcloud/service/impl/MessageProviderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-stream-rabbitmq-consumer8802/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-stream-rabbitmq-consumer8802/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-stream-rabbitmq-provider8801/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-stream-rabbitmq-provider8801/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -350,6 +345,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
@@ -388,7 +388,7 @@
       <workItem from="1618799178617" duration="1299000" />
       <workItem from="1618823277004" duration="2211000" />
       <workItem from="1618880411632" duration="7739000" />
-      <workItem from="1618899292649" duration="5544000" />
+      <workItem from="1618899292649" duration="6028000" />
     </task>
     <task id="LOCAL-00001" summary="cloud-api-commons&#10;cloud-provider-payment8001">
       <created>1618132179045</created>
@@ -600,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618903378548</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="cloud-stream-rabbitmq-consumer8802:&#10;   Stream消息驱动之消费者业务逻辑构建完成，能收到生产者发送的消息">
+      <created>1618905272074</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1618905272074</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,7 +627,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cloud-eureka-server7001单机版实现完成" />
     <MESSAGE value="cloud-eureka-server7001&#10;cloud-eureka-server7002&#10;集群的实现" />
     <MESSAGE value="负载均衡的实现" />
     <MESSAGE value="cloud-provider-payment8001:&#10;  @EnableDiscoveryClient//服务发现client端   的使用" />
@@ -645,7 +651,8 @@
     <MESSAGE value="cloud-config-center-3344:&#10;   配置中心的搭建" />
     <MESSAGE value="cloud-config-center-3344:&#10;cloud-config-client-3355:&#10;cloud-config-client-3366:&#10;   一次修改，广播通知，处处生效" />
     <MESSAGE value="cloud-stream-rabbitmq-provider8801:&#10;   Stream消息驱动之生产者业务逻辑构建完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="cloud-stream-rabbitmq-provider8801:&#10;   Stream消息驱动之生产者业务逻辑构建完成" />
+    <MESSAGE value="cloud-stream-rabbitmq-consumer8802:&#10;   Stream消息驱动之消费者业务逻辑构建完成，能收到生产者发送的消息" />
+    <option name="LAST_COMMIT_MESSAGE" value="cloud-stream-rabbitmq-consumer8802:&#10;   Stream消息驱动之消费者业务逻辑构建完成，能收到生产者发送的消息" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="151" key="#Project_Structure" timestamp="1618883109188">
@@ -671,11 +678,11 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1500.960@0.0.1500.960" timestamp="1618370169710" />
-    <state x="363" y="0" width="1225" height="872" key="CommitChangelistDialog2" timestamp="1618905200739">
+    <state x="363" y="0" width="1225" height="872" key="CommitChangelistDialog2" timestamp="1618905719186">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="275" y="80" width="1225" height="872" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618566769585" />
-    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1618905200739" />
+    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1618905719186" />
     <state width="443" height="466" key="DebuggerActiveHint" timestamp="1618886204299">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -689,42 +696,42 @@
     </state>
     <state x="900" y="224" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1618566079885" />
     <state x="922" y="195" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1618904065925" />
-    <state width="856" height="197" key="GridCell.Tab.0.bottom" timestamp="1618905196350">
+    <state width="856" height="262" key="GridCell.Tab.0.bottom" timestamp="1618905697214">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="856" height="197" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618905196350" />
-    <state width="856" height="197" key="GridCell.Tab.0.center" timestamp="1618905196350">
+    <state width="856" height="262" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618905697214" />
+    <state width="856" height="262" key="GridCell.Tab.0.center" timestamp="1618905697213">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="856" height="197" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618905196350" />
-    <state width="856" height="197" key="GridCell.Tab.0.left" timestamp="1618905196350">
+    <state width="856" height="262" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618905697213" />
+    <state width="856" height="262" key="GridCell.Tab.0.left" timestamp="1618905697213">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="856" height="197" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618905196350" />
-    <state width="856" height="197" key="GridCell.Tab.0.right" timestamp="1618905196350">
+    <state width="856" height="262" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618905697213" />
+    <state width="856" height="262" key="GridCell.Tab.0.right" timestamp="1618905697213">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="856" height="197" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618905196350" />
-    <state width="856" height="197" key="GridCell.Tab.1.bottom" timestamp="1618905196350">
+    <state width="856" height="262" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618905697213" />
+    <state width="856" height="262" key="GridCell.Tab.1.bottom" timestamp="1618905697214">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="856" height="197" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618905196350" />
-    <state width="856" height="197" key="GridCell.Tab.1.center" timestamp="1618905196350">
+    <state width="856" height="262" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618905697214" />
+    <state width="856" height="262" key="GridCell.Tab.1.center" timestamp="1618905697214">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="856" height="197" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1618905196350" />
-    <state width="856" height="197" key="GridCell.Tab.1.left" timestamp="1618905196350">
+    <state width="856" height="262" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1618905697214" />
+    <state width="856" height="262" key="GridCell.Tab.1.left" timestamp="1618905697214">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="856" height="197" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1618905196350" />
-    <state width="856" height="197" key="GridCell.Tab.1.right" timestamp="1618905196350">
+    <state width="856" height="262" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1618905697214" />
+    <state width="856" height="262" key="GridCell.Tab.1.right" timestamp="1618905697214">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="856" height="197" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1618905196350" />
+    <state width="856" height="262" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1618905697214" />
     <state width="856" height="223" key="GridCell.Tab.2.bottom" timestamp="1618886222879">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -755,11 +762,11 @@
     </state>
     <state x="274" y="111" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1618476095522" />
     <state x="498" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1618904069272" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1618903383613">
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1618905727684">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618566772618" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1618903383613" />
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1618905727684" />
     <state x="444" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1618899299352">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
