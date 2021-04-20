@@ -22,7 +22,7 @@ public class MessageProviderImpl implements IMessageProvider {
     @Override
     public String send() {
         String serial= UUID.randomUUID().toString();
-        output.send(MessageBuilder.withPayload(serial).build());
+        output.send(MessageBuilder.withPayload(serial).build());//withPayload--与消费者getPayload绑定，一一对应
         System.out.println("******serial: "+serial);
         return null;
     }
