@@ -26,7 +26,6 @@
     <module>cloud-api-commons</module>
     <!--客户端-->
     <module>cloud-consumer-order80</module>
-
     <module>cloud-provider-payment8004</module>
     <module>cloud-consumerzk-order80</module>
       <module>cloud-consumer-feign-order80</module>
@@ -37,6 +36,11 @@
       <module>cloud-config-center-3344</module>
       <module>cloud-config-client-3355</module>
       <module>cloud-config-client-3366</module>
+    <!--作为生产者进行发消息模块-->
+      <module>cloud-stream-rabbitmq-provider8801</module>
+    <!--8002与8003，作为消息接收模块-->
+    <module>cloud-stream-rabbitmq-consumer8802</module>
+    <module>cloud-stream-rabbitmq-consumer8803</module>
   </modules>
 
   <!--统一管理jar包版本-->
