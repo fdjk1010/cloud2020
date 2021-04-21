@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="">
+    <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  8802/8803都变成同一组，避免重复消费，轮询通知&#10;  group: demo&#10;  group：demo">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-stream-rabbitmq-consumer8802/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-stream-rabbitmq-consumer8802/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/demo/springcloud/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/demo/springcloud/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/demo/springcloud/module/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/demo/springcloud/module/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -344,7 +350,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.4152249" />
+          <option name="contentProportion" value="0.22336066" />
           <treeState>
             <expand>
               <path>
@@ -397,7 +403,8 @@
       <workItem from="1618799178617" duration="1299000" />
       <workItem from="1618823277004" duration="2211000" />
       <workItem from="1618880411632" duration="7739000" />
-      <workItem from="1618899292649" duration="8360000" />
+      <workItem from="1618899292649" duration="12359000" />
+      <workItem from="1618967597923" duration="4472000" />
     </task>
     <task id="LOCAL-00001" summary="cloud-api-commons&#10;cloud-provider-payment8001">
       <created>1618132179045</created>
@@ -644,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618907858003</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  8802/8803都变成同一组，避免重复消费，轮询通知&#10;  group: demo&#10;  group：demo">
+      <created>1618908080969</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1618908080969</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +678,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cloud-provider-payment8001:&#10;cloud-eureka-server7001:&#10;  实现自我保护机制关闭，集群改单机，测试" />
     <MESSAGE value="cloud-provider-payment8004:&#10;业务代码上传，测试zookeeper" />
     <MESSAGE value="cloud-consumerzk-order80:&#10;    测试zookeeper,互相调用，替代eureka" />
     <MESSAGE value="cloud-consumer-order80:&#10;    ribbon自定义轮询方式的实现" />
@@ -689,7 +702,8 @@
     <MESSAGE value="cloud-stream-rabbitmq-consumer8802:&#10;   bug" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  目前是8802和8803同时收到了，存在重复消费问题&#10;  可以使用Stream中的消费分组来解决：&#10;  &#9;不同的组可以全面消费的（重复消费），同一组内会发生竞争关系，只是其中一个可以消费&#10;  默认都是不同的组，" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  8802/8803都变成不同组，重复消费&#10;  group: demoA&#10;  group：demoB" />
-    <option name="LAST_COMMIT_MESSAGE" value="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  8802/8803都变成不同组，重复消费&#10;  group: demoA&#10;  group：demoB" />
+    <MESSAGE value="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  8802/8803都变成同一组，避免重复消费，轮询通知&#10;  group: demo&#10;  group：demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  8802/8803都变成同一组，避免重复消费，轮询通知&#10;  group: demo&#10;  group：demo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="151" key="#Project_Structure" timestamp="1618905791256">
@@ -715,11 +729,11 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1500.960@0.0.1500.960" timestamp="1618370169710" />
-    <state x="363" y="0" width="1225" height="872" key="CommitChangelistDialog2" timestamp="1618907857019">
+    <state x="363" y="0" width="1225" height="872" key="CommitChangelistDialog2" timestamp="1618908671886">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="275" y="80" width="1225" height="872" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618566769585" />
-    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1618907857019" />
+    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1618908671886" />
     <state width="443" height="466" key="DebuggerActiveHint" timestamp="1618886204299">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -734,42 +748,42 @@
     </state>
     <state x="900" y="224" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1618566079885" />
     <state x="922" y="195" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1618905831721" />
-    <state width="616" height="234" key="GridCell.Tab.0.bottom" timestamp="1618907827549">
+    <state width="713" height="140" key="GridCell.Tab.0.bottom" timestamp="1618972238686">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="616" height="234" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618907827549" />
-    <state width="616" height="234" key="GridCell.Tab.0.center" timestamp="1618907827549">
+    <state width="713" height="140" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618972238686" />
+    <state width="713" height="140" key="GridCell.Tab.0.center" timestamp="1618972238685">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="616" height="234" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618907827549" />
-    <state width="616" height="234" key="GridCell.Tab.0.left" timestamp="1618907827549">
+    <state width="713" height="140" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618972238685" />
+    <state width="713" height="140" key="GridCell.Tab.0.left" timestamp="1618972238685">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="616" height="234" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618907827549" />
-    <state width="616" height="234" key="GridCell.Tab.0.right" timestamp="1618907827549">
+    <state width="713" height="140" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618972238685" />
+    <state width="713" height="140" key="GridCell.Tab.0.right" timestamp="1618972238686">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="616" height="234" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618907827549" />
-    <state width="616" height="234" key="GridCell.Tab.1.bottom" timestamp="1618907827549">
+    <state width="713" height="140" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618972238686" />
+    <state width="713" height="140" key="GridCell.Tab.1.bottom" timestamp="1618972238686">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="616" height="234" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618907827549" />
-    <state width="616" height="234" key="GridCell.Tab.1.center" timestamp="1618907827549">
+    <state width="713" height="140" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618972238686" />
+    <state width="713" height="140" key="GridCell.Tab.1.center" timestamp="1618972238686">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="616" height="234" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1618907827549" />
-    <state width="616" height="234" key="GridCell.Tab.1.left" timestamp="1618907827549">
+    <state width="713" height="140" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1618972238686" />
+    <state width="713" height="140" key="GridCell.Tab.1.left" timestamp="1618972238686">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="616" height="234" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1618907827549" />
-    <state width="616" height="234" key="GridCell.Tab.1.right" timestamp="1618907827549">
+    <state width="713" height="140" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1618972238686" />
+    <state width="713" height="140" key="GridCell.Tab.1.right" timestamp="1618972238686">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="616" height="234" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1618907827549" />
+    <state width="713" height="140" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1618972238686" />
     <state width="856" height="223" key="GridCell.Tab.2.bottom" timestamp="1618886222879">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -800,21 +814,21 @@
     </state>
     <state x="274" y="111" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1618476095522" />
     <state x="498" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1618905835007" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1618907860253">
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1618908665321">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618566772618" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1618907860253" />
-    <state x="444" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1618899299352">
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1618908665321" />
+    <state x="444" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1618967597776">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="434" y="304" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1618799177397" />
-    <state x="444" y="264" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1618899299352" />
-    <state x="559" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618880455566">
+    <state x="444" y="264" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1618967597776" />
+    <state x="559" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618908653895">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="546" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1618191397205" />
-    <state x="559" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1618880455566" />
+    <state x="559" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1618908653895" />
     <state x="729" y="320" width="641" height="534" key="find.popup" timestamp="1618211047439">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
