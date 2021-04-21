@@ -41,6 +41,7 @@
     <!--8002与8003，作为消息接收模块-->
     <module>cloud-stream-rabbitmq-consumer8802</module>
     <module>cloud-stream-rabbitmq-consumer8803</module>
+    <module>cloudalibaba-provider-payment9001</module>
   </modules>
 
   <!--统一管理jar包版本-->
