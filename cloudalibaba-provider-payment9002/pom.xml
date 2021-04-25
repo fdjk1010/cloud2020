@@ -13,6 +13,11 @@
 
 
     <dependencies>
+        <!--nacos-config-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
         <!--SpringCloud alibaba nacos-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
