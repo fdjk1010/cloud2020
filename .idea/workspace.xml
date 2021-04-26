@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="cloudalibaba-config-nacos-client3377:&#10;   Namespace（命名空间）分组&#10;   &#10;   spring:&#10;     application:&#10;       name: nacos-config-client&#10;     cloud:&#10;       nacos:&#10;         discovery:&#10;           server-addr: localhost:8848 #nacos服务注册中心地址&#10;         config:&#10;           server-addr: localhost:8848 #nacos服务配置中心地址&#10;           file-extension: yaml #指定对应nacos的yaml格式的配置&#10;   #        group: TEST_GROUP #对应nacos的Group名&#10;           group: DEV_GROUP #对应nacos的Group名&#10;           namespace: 361d9311-041d-4307-97a7-aae8fabe825f #dev命名空间id">
+    <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/cloudalibaba-sentinel-service8401.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/demo/springcloud/alibaba/MainApp8401.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/demo/springcloud/alibaba/controller/FlowLimitCotroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-provider-payment9002/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9002/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-provider-payment9002/src/main/java/come/demo/springcloud/alibaba/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9002/src/main/java/come/demo/springcloud/alibaba/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-provider-payment9002/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9002/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/resources/application" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,6 +82,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desktop\springcloud工具\cloud2020\cloudalibaba-sentinel-service8401\src\main\resources" />
       <recent name="C:\Users\surface\Desktop\springcloud工具\cloud2020\cloud-provider-payment8002\src\main\java" />
       <recent name="C:\Users\surface\Desktop\springcloud工具\cloud2020\cloud-provider-payment8002\src\main\resources" />
       <recent name="C:\Users\surface\Desktop\springcloud工具\cloud2020\cloud-eureka-server7001\src\main\resources" />
@@ -91,7 +95,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.NacosConfigClientMain3377">
+  <component name="RunManager" selected="Spring Boot.MainApp8401">
     <configuration name="T2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="T2" />
       <module name="cloud-gateway-gateway9527" />
@@ -171,6 +175,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainApp8401" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="cloudalibaba-sentinel-service8401" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.springcloud.alibaba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.springcloud.alibaba.MainApp8401" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainAppConfigCenter3344" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cloud-config-center-3344" />
       <extension name="coverage">
@@ -184,7 +201,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NacosConfigClientMain3377" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="NacosConfigClientMain3377" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cloudalibaba-config-nacos-client3377" />
       <extension name="coverage">
         <pattern>
@@ -391,10 +408,10 @@
       <item itemvalue="Spring Boot.PaymentMain9001" />
       <item itemvalue="Spring Boot.OrderNacosMain83" />
       <item itemvalue="Spring Boot.NacosConfigClientMain3377" />
+      <item itemvalue="Spring Boot.MainApp8401" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.NacosConfigClientMain3377" />
         <item itemvalue="Application.T2" />
       </list>
     </recent_temporary>
@@ -419,6 +436,11 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -461,7 +483,8 @@
       <workItem from="1619054095130" duration="10379000" />
       <workItem from="1619077000739" duration="1231000" />
       <workItem from="1619168081931" duration="1224000" />
-      <workItem from="1619334433348" duration="3108000" />
+      <workItem from="1619334433348" duration="6109000" />
+      <workItem from="1619399542671" duration="4571000" />
     </task>
     <task id="LOCAL-00001" summary="cloud-api-commons&#10;cloud-provider-payment8001">
       <created>1618132179045</created>
@@ -771,7 +794,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619071870497</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="cloudalibaba-config-nacos-client3377:&#10;   通过修改到liunx下nacos集群nginx访问，注册到nacos中心，以及读取配置文件，&#10;   注意，每一行yaml  :以后必须手动打一个空格">
+      <created>1619340390867</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1619340390867</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -791,7 +821,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cloud-consumer-feign-hystrix-order80:&#10;       解耦加降级&#10;       主要异常：运行、超时、宕机&#10;       #用于服务降级 在注解@FeignClient中添加fallbackFactory属性" />
     <MESSAGE value="cloud-provider-hystrix-payment8001:&#10;   服务熔断&#10;   当检测到该节点微服务调用相应正常后，恢复调用链路&#10;   &#9;（慢慢的恢复正常，达到一定正确率）" />
     <MESSAGE value="cloud-consumer-hystrix-dashboar9001:&#10;  hystrix图形化Dashboard搭建" />
     <MESSAGE value="cloud-gateway-gateway9527:&#10;   gateway网关搭建" />
@@ -816,7 +845,8 @@
     <MESSAGE value="cloudalibaba-config-nacos-client3377:&#10;   Data ID分组方式" />
     <MESSAGE value="cloudalibaba-config-nacos-client3377:&#10;   Group分组方式" />
     <MESSAGE value="cloudalibaba-config-nacos-client3377:&#10;   Namespace（命名空间）分组&#10;   &#10;   spring:&#10;     application:&#10;       name: nacos-config-client&#10;     cloud:&#10;       nacos:&#10;         discovery:&#10;           server-addr: localhost:8848 #nacos服务注册中心地址&#10;         config:&#10;           server-addr: localhost:8848 #nacos服务配置中心地址&#10;           file-extension: yaml #指定对应nacos的yaml格式的配置&#10;   #        group: TEST_GROUP #对应nacos的Group名&#10;           group: DEV_GROUP #对应nacos的Group名&#10;           namespace: 361d9311-041d-4307-97a7-aae8fabe825f #dev命名空间id" />
-    <option name="LAST_COMMIT_MESSAGE" value="cloudalibaba-config-nacos-client3377:&#10;   Namespace（命名空间）分组&#10;   &#10;   spring:&#10;     application:&#10;       name: nacos-config-client&#10;     cloud:&#10;       nacos:&#10;         discovery:&#10;           server-addr: localhost:8848 #nacos服务注册中心地址&#10;         config:&#10;           server-addr: localhost:8848 #nacos服务配置中心地址&#10;           file-extension: yaml #指定对应nacos的yaml格式的配置&#10;   #        group: TEST_GROUP #对应nacos的Group名&#10;           group: DEV_GROUP #对应nacos的Group名&#10;           namespace: 361d9311-041d-4307-97a7-aae8fabe825f #dev命名空间id" />
+    <MESSAGE value="cloudalibaba-config-nacos-client3377:&#10;   通过修改到liunx下nacos集群nginx访问，注册到nacos中心，以及读取配置文件，&#10;   注意，每一行yaml  :以后必须手动打一个空格" />
+    <option name="LAST_COMMIT_MESSAGE" value="cloudalibaba-config-nacos-client3377:&#10;   通过修改到liunx下nacos集群nginx访问，注册到nacos中心，以及读取配置文件，&#10;   注意，每一行yaml  :以后必须手动打一个空格" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="151" key="#Project_Structure" timestamp="1618905791256">
@@ -824,11 +854,11 @@
     </state>
     <state x="0" y="279" key="#Project_Structure/0.0.1500.960@0.0.1500.960" timestamp="1618370026430" />
     <state x="0" y="151" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1618905791256" />
-    <state x="266" y="144" width="1151" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619055287601">
+    <state x="266" y="144" width="1151" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619405843060">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="260" y="238" width="1151" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1618799287895" />
-    <state x="266" y="144" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1619055287601" />
+    <state x="266" y="144" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1619405843060" />
     <state x="894" y="264" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619057020881">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -842,11 +872,11 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1500.960@0.0.1500.960" timestamp="1618370169710" />
-    <state x="311" y="94" width="1048" height="740" key="CommitChangelistDialog2" timestamp="1619340301798">
+    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2" timestamp="1619340389958">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="275" y="80" width="1225" height="872" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618566769585" />
-    <state x="311" y="94" width="1048" height="740" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619340301798" />
+    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619340389958" />
     <state width="443" height="466" key="DebuggerActiveHint" timestamp="1618886204299">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -856,47 +886,47 @@
     </state>
     <state x="536" y="251" width="892" height="539" key="DiffContextDialog/0.0.1500.960@0.0.1500.960" timestamp="1618192491508" />
     <state x="294" y="131" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1618905752072" />
-    <state x="922" y="195" key="FileChooserDialogImpl" timestamp="1619057047289">
+    <state x="922" y="195" key="FileChooserDialogImpl" timestamp="1619403761970">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="900" y="224" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1618566079885" />
-    <state x="922" y="195" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1619057047289" />
-    <state width="1036" height="277" key="GridCell.Tab.0.bottom" timestamp="1619340257199">
+    <state x="922" y="195" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1619403761970" />
+    <state width="731" height="275" key="GridCell.Tab.0.bottom" timestamp="1619406221584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="277" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619340257199" />
-    <state width="1036" height="277" key="GridCell.Tab.0.center" timestamp="1619340257199">
+    <state width="731" height="275" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619406221584" />
+    <state width="731" height="275" key="GridCell.Tab.0.center" timestamp="1619406221584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="277" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619340257199" />
-    <state width="1036" height="277" key="GridCell.Tab.0.left" timestamp="1619340257199">
+    <state width="731" height="275" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619406221584" />
+    <state width="731" height="275" key="GridCell.Tab.0.left" timestamp="1619406221584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="277" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619340257199" />
-    <state width="1036" height="277" key="GridCell.Tab.0.right" timestamp="1619340257199">
+    <state width="731" height="275" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619406221584" />
+    <state width="731" height="275" key="GridCell.Tab.0.right" timestamp="1619406221584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="277" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619340257199" />
-    <state width="1036" height="277" key="GridCell.Tab.1.bottom" timestamp="1619340257199">
+    <state width="731" height="275" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619406221584" />
+    <state width="731" height="275" key="GridCell.Tab.1.bottom" timestamp="1619406221584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="277" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619340257199" />
-    <state width="1036" height="277" key="GridCell.Tab.1.center" timestamp="1619340257199">
+    <state width="731" height="275" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619406221584" />
+    <state width="731" height="275" key="GridCell.Tab.1.center" timestamp="1619406221584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="277" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1619340257199" />
-    <state width="1036" height="277" key="GridCell.Tab.1.left" timestamp="1619340257199">
+    <state width="731" height="275" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1619406221584" />
+    <state width="731" height="275" key="GridCell.Tab.1.left" timestamp="1619406221584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="277" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1619340257199" />
-    <state width="1036" height="277" key="GridCell.Tab.1.right" timestamp="1619340257199">
+    <state width="731" height="275" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1619406221584" />
+    <state width="731" height="275" key="GridCell.Tab.1.right" timestamp="1619406221584">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="277" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1619340257199" />
+    <state width="731" height="275" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1619406221584" />
     <state width="856" height="223" key="GridCell.Tab.2.bottom" timestamp="1618886222879">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -922,21 +952,21 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="0" y="286" key="Registry/0.0.1500.960@0.0.1500.960" timestamp="1618219732716" />
-    <state x="498" y="0" key="SettingsEditor" timestamp="1619057048560">
+    <state x="498" y="0" key="SettingsEditor" timestamp="1619403765746">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="274" y="111" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1618476095522" />
-    <state x="498" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619057048560" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1619170881231">
+    <state x="498" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619403765746" />
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1619340393709">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618566772618" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619170881231" />
-    <state x="444" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1619334432904">
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619340393709" />
+    <state x="444" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1619399541358">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="434" y="304" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1618799177397" />
-    <state x="444" y="264" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1619334432904" />
+    <state x="444" y="264" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1619399541358" />
     <state x="559" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618908653895">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -950,11 +980,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="477" y="208" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1618823181584" />
-    <state x="230" y="223" width="1266" height="608" key="new project wizard" timestamp="1619056817597">
+    <state x="230" y="223" width="1266" height="608" key="new project wizard" timestamp="1619402924433">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="234" y="352" width="1266" height="608" key="new project wizard/0.0.1500.960@0.0.1500.960" timestamp="1618796046105" />
-    <state x="230" y="223" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1619056817597" />
+    <state x="230" y="223" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1619402924433" />
     <state x="454" y="107" key="refactoring.ChangeSignatureDialog" timestamp="1618131518885">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -968,11 +998,11 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="623" y="327" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1618474270504" />
-    <state x="338" y="190" key="spring file set editor" timestamp="1619057047841">
+    <state x="338" y="190" key="spring file set editor" timestamp="1619403762899">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="330" y="219" key="spring file set editor/0.0.1500.960@0.0.1500.960" timestamp="1618476093178" />
-    <state x="338" y="190" key="spring file set editor/0.0.1536.834@0.0.1536.834" timestamp="1619057047841" />
+    <state x="338" y="190" key="spring file set editor/0.0.1536.834@0.0.1536.834" timestamp="1619403762899" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
