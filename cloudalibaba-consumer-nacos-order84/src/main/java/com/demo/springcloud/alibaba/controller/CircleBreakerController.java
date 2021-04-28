@@ -26,11 +26,11 @@ public class CircleBreakerController {
 
 
     @RequestMapping("/consumer/fallback/{id}")
-    //@SentinelResource(value = "fallback") //没有配置
-    //@SentinelResource(value = "fallback",fallback = "handlerFallback") //fallback只负责业务异常
-    //@SentinelResource(value = "fallback",blockHandler = "blockHandler") //blockHandler只负责sentinel控制台配置违规
-    @SentinelResource(value = "fallback", fallback = "handlerFallback", blockHandler = "blockHandler",
-            exceptionsToIgnore = {IllegalArgumentException.class})
+//    @SentinelResource(value = "fallback") //没有配置
+//    @SentinelResource(value = "fallback",fallback = "handlerFallback") //fallback只负责业务异常
+//    @SentinelResource(value = "fallback",blockHandler = "blockHandler") //blockHandler只负责sentinel控制台配置违规
+//    @SentinelResource(value = "fallback", fallback = "handlerFallback", blockHandler = "blockHandler")//如果进入限制就进入blockHandler，没有限制则进入fallback
+    @SentinelResource(value = "fallback", fallback = "handlerFallback", blockHandler = "blockHandler",exceptionsToIgnore = {IllegalArgumentException.class})//exceptionsToIgnore(忽略某些异常)取掉某个异常的兜底，除此异常以外，所有的异常都走兜底，如果达到限制，则走blockHandler
     public CommonResult<Payment> fallback(@PathVariable Long id) {
         CommonResult<Payment> result = restTemplate.getForObject(SERVICE_URL + "/paymentSQL/" + id, CommonResult.class, id);
 
