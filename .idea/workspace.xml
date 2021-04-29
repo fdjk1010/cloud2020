@@ -2,8 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/seata-order-service2001.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/SeataOrderMainApp2001.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/config/DataSourceProxyConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/config/MyBatisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/entity/CommonResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/StorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/resources/file.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/resources/registry.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +73,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order84/src/main/resources/application.yml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/seata-order-service2001/src/main/resources/application.yml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -88,7 +107,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MainApp8401">
+  <component name="RunManager" selected="Spring Boot.SeataOrderMainApp2001">
     <configuration name="T2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="T2" />
       <module name="cloud-gateway-gateway9527" />
@@ -377,6 +396,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SeataOrderMainApp2001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="seata-order-service2001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.springcloud.alibaba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.springcloud.alibaba.SeataOrderMainApp2001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StreamMQMain8801" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cloud-stream-rabbitmq-provider8801" />
       <extension name="coverage">
@@ -444,9 +476,11 @@
       <item itemvalue="Spring Boot.PaymentMain9004" />
       <item itemvalue="Spring Boot.PaymentMain9003" />
       <item itemvalue="Spring Boot.OrderNacosMain84" />
+      <item itemvalue="Spring Boot.SeataOrderMainApp2001" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SeataOrderMainApp2001" />
         <item itemvalue="Application.T2" />
       </list>
     </recent_temporary>
@@ -470,7 +504,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -517,14 +551,8 @@
       <workItem from="1619399542671" duration="8874000" />
       <workItem from="1619421359124" duration="4882000" />
       <workItem from="1619485092946" duration="15853000" />
-      <workItem from="1619572385874" duration="12464000" />
-    </task>
-    <task id="LOCAL-00006" summary="cloud-eureka-server7001&#10;cloud-eureka-server7002&#10;集群的实现">
-      <created>1618214391992</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1618214391992</updated>
+      <workItem from="1619572385874" duration="12859000" />
+      <workItem from="1619662449055" duration="13326000" />
     </task>
     <task id="LOCAL-00007" summary="负载均衡的实现">
       <created>1618221272381</created>
@@ -862,11 +890,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619579153152</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="cloudalibaba-sentinel-service8401:&#10;   &#9;sentinel手动持久化，通过nacos配置文件，保存Sentinel配置，避免消失问题">
+      <created>1619602949095</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1619602949095</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -882,7 +920,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cloud-config-center-3344:&#10;   配置中心的搭建" />
     <MESSAGE value="cloud-config-center-3344:&#10;cloud-config-client-3355:&#10;cloud-config-client-3366:&#10;   一次修改，广播通知，处处生效" />
     <MESSAGE value="cloud-stream-rabbitmq-provider8801:&#10;   Stream消息驱动之生产者业务逻辑构建完成" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8802:&#10;   Stream消息驱动之消费者业务逻辑构建完成，能收到生产者发送的消息" />
@@ -907,7 +944,8 @@
     <MESSAGE value="cloudalibaba-sentinel-service8401:&#10;   &#9;@SentinelResource(value = &quot;customerBlockHandler&quot;,&#10;                blockHandlerClass = CustomerBlockHandler.class,//指定兜底类&#10;                blockHandler = &quot;HandlerException2&quot;)//指定兜底类下面的具体某个方法&#10;     对兜底方法和业务类解耦" />
     <MESSAGE value="cloudalibaba-sentinel-service8401:&#10;   &#9;sentinel整合ribbon+openFeign+fallback之Ribbon系列" />
     <MESSAGE value="cloudalibaba-sentinel-service8401:&#10;   &#9;sentinel整合ribbon+openFeign+fallback实现综合的熔断降级等等,直接关闭服务端，进入兜底方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="cloudalibaba-sentinel-service8401:&#10;   &#9;sentinel整合ribbon+openFeign+fallback实现综合的熔断降级等等,直接关闭服务端，进入兜底方法" />
+    <MESSAGE value="cloudalibaba-sentinel-service8401:&#10;   &#9;sentinel手动持久化，通过nacos配置文件，保存Sentinel配置，避免消失问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="cloudalibaba-sentinel-service8401:&#10;   &#9;sentinel手动持久化，通过nacos配置文件，保存Sentinel配置，避免消失问题" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="151" key="#Project_Structure" timestamp="1618905791256">
@@ -924,90 +962,90 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="894" y="264" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1619057020881" />
-    <state x="0" y="253" key="#com.intellij.ide.util.MemberChooser" timestamp="1619578549472">
+    <state x="0" y="253" key="#com.intellij.ide.util.MemberChooser" timestamp="1619681955500">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="0" y="381" key="#com.intellij.ide.util.MemberChooser/0.0.1500.960@0.0.1500.960" timestamp="1618561460684" />
-    <state x="0" y="253" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1619578549472" />
+    <state x="0" y="253" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1619681955500" />
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1618370169710">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1500.960@0.0.1500.960" timestamp="1618370169710" />
-    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2" timestamp="1619579152212">
+    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2" timestamp="1619688789707">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="275" y="80" width="1225" height="872" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618566769585" />
-    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619579152212" />
-    <state width="443" height="466" key="DebuggerActiveHint" timestamp="1618886204299">
+    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619688789707" />
+    <state width="584" height="466" key="DebuggerActiveHint" timestamp="1619686956933">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="443" height="466" key="DebuggerActiveHint/0.0.1536.834@0.0.1536.834" timestamp="1618886204299" />
+    <state width="584" height="466" key="DebuggerActiveHint/0.0.1536.834@0.0.1536.834" timestamp="1619686956933" />
     <state x="294" y="131" width="892" height="539" key="DiffContextDialog" timestamp="1618905752072">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="536" y="251" width="892" height="539" key="DiffContextDialog/0.0.1500.960@0.0.1500.960" timestamp="1618192491508" />
     <state x="294" y="131" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1618905752072" />
-    <state x="922" y="195" key="FileChooserDialogImpl" timestamp="1619504951801">
+    <state x="922" y="195" key="FileChooserDialogImpl" timestamp="1619677478321">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="900" y="224" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1618566079885" />
-    <state x="922" y="195" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1619504951801" />
+    <state x="922" y="195" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1619677478321" />
     <state x="484" y="129" key="GrepConsoleSettings" timestamp="1619425210862">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="484" y="129" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1619425210862" />
-    <state width="837" height="66" key="GridCell.Tab.0.bottom" timestamp="1619602895283">
+    <state width="1036" height="550" key="GridCell.Tab.0.bottom" timestamp="1619688783888">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="837" height="66" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619602895283" />
-    <state width="837" height="66" key="GridCell.Tab.0.center" timestamp="1619602895283">
+    <state width="1036" height="550" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619688783888" />
+    <state width="1036" height="550" key="GridCell.Tab.0.center" timestamp="1619688783887">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="837" height="66" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619602895283" />
-    <state width="837" height="66" key="GridCell.Tab.0.left" timestamp="1619602895282">
+    <state width="1036" height="550" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619688783887" />
+    <state width="1036" height="550" key="GridCell.Tab.0.left" timestamp="1619688783887">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="837" height="66" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619602895282" />
-    <state width="837" height="66" key="GridCell.Tab.0.right" timestamp="1619602895283">
+    <state width="1036" height="550" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619688783887" />
+    <state width="1036" height="550" key="GridCell.Tab.0.right" timestamp="1619688783888">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="837" height="66" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619602895283" />
-    <state width="837" height="66" key="GridCell.Tab.1.bottom" timestamp="1619602895283">
+    <state width="1036" height="550" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619688783888" />
+    <state width="1036" height="550" key="GridCell.Tab.1.bottom" timestamp="1619688783888">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="837" height="66" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619602895283" />
-    <state width="837" height="66" key="GridCell.Tab.1.center" timestamp="1619602895283">
+    <state width="1036" height="550" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619688783888" />
+    <state width="1036" height="550" key="GridCell.Tab.1.center" timestamp="1619688783888">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="837" height="66" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1619602895283" />
-    <state width="837" height="66" key="GridCell.Tab.1.left" timestamp="1619602895283">
+    <state width="1036" height="550" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1619688783888" />
+    <state width="1036" height="550" key="GridCell.Tab.1.left" timestamp="1619688783888">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="837" height="66" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1619602895283" />
-    <state width="837" height="66" key="GridCell.Tab.1.right" timestamp="1619602895283">
+    <state width="1036" height="550" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1619688783888" />
+    <state width="1036" height="550" key="GridCell.Tab.1.right" timestamp="1619688783888">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="837" height="66" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1619602895283" />
-    <state width="856" height="223" key="GridCell.Tab.2.bottom" timestamp="1618886222879">
+    <state width="1036" height="550" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1619688783888" />
+    <state width="1036" height="477" key="GridCell.Tab.2.bottom" timestamp="1619687000003">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="856" height="223" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618886222879" />
-    <state width="856" height="223" key="GridCell.Tab.2.center" timestamp="1618886222879">
+    <state width="1036" height="477" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619687000003" />
+    <state width="1036" height="477" key="GridCell.Tab.2.center" timestamp="1619687000003">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="856" height="223" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1618886222879" />
-    <state width="856" height="223" key="GridCell.Tab.2.left" timestamp="1618886222879">
+    <state width="1036" height="477" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1619687000003" />
+    <state width="1036" height="477" key="GridCell.Tab.2.left" timestamp="1619687000003">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="856" height="223" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1618886222879" />
-    <state width="856" height="223" key="GridCell.Tab.2.right" timestamp="1618886222879">
+    <state width="1036" height="477" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1619687000003" />
+    <state width="1036" height="477" key="GridCell.Tab.2.right" timestamp="1619687000003">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="856" height="223" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1618886222879" />
+    <state width="1036" height="477" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1619687000003" />
     <state x="574" y="229" key="NewModule_or_Project.wizard" timestamp="1618823352844">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -1018,21 +1056,25 @@
     </state>
     <state x="0" y="286" key="Registry/0.0.1500.960@0.0.1500.960" timestamp="1618219732716" />
     <state x="331" y="140" key="Registry/0.0.1536.834@0.0.1536.834" timestamp="1619487242768" />
-    <state x="268" y="0" key="SettingsEditor" timestamp="1619504954870">
+    <state x="268" y="0" key="SettingsEditor" timestamp="1619677480782">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="274" y="111" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1618476095522" />
-    <state x="268" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619504954870" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1619579154908">
+    <state x="268" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619677480782" />
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1619602951778">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618566772618" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619579154908" />
-    <state x="444" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1619572449541">
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619602951778" />
+    <state x="444" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1619662477531">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="434" y="304" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1618799177397" />
-    <state x="444" y="264" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1619572449541" />
+    <state x="444" y="264" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1619662477531" />
+    <state x="0" y="73" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1619680448487">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="0" y="73" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1619680448487" />
     <state x="559" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619490411190">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -1046,11 +1088,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="477" y="208" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1618823181584" />
-    <state x="230" y="223" width="1266" height="608" key="new project wizard" timestamp="1619504677627">
+    <state x="356" y="187" width="1266" height="608" key="new project wizard" timestamp="1619677284234">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="234" y="352" width="1266" height="608" key="new project wizard/0.0.1500.960@0.0.1500.960" timestamp="1618796046105" />
-    <state x="230" y="223" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1619504677627" />
+    <state x="356" y="187" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1619677284234" />
     <state x="454" y="107" key="refactoring.ChangeSignatureDialog" timestamp="1618131518885">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -1065,11 +1107,11 @@
     </state>
     <state x="623" y="327" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1618474270504" />
     <state x="638" y="282" width="689" height="590" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1619578666392" />
-    <state x="338" y="190" key="spring file set editor" timestamp="1619504952801">
+    <state x="338" y="190" key="spring file set editor" timestamp="1619677479219">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="330" y="219" key="spring file set editor/0.0.1500.960@0.0.1500.960" timestamp="1618476093178" />
-    <state x="338" y="190" key="spring file set editor/0.0.1536.834@0.0.1536.834" timestamp="1619504952801" />
+    <state x="338" y="190" key="spring file set editor/0.0.1536.834@0.0.1536.834" timestamp="1619677479219" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1079,11 +1121,47 @@
           <line>21</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/config/DataSourceProxyConfig.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/config/DataSourceProxyConfig.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/config/DataSourceProxyConfig.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/config/DataSourceProxyConfig.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/config/DataSourceProxyConfig.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/config/DataSourceProxyConfig.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/cloud-config-client-3366/src/main/java/com/demo/springcloud/controller/ConfigClientController.java</url>
           <line>17</line>
           <properties field="configInfo" class="com.demo.springcloud.controller.ConfigClientController" />
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/config/DataSourceProxyConfig.java</url>
+          <line>23</line>
+          <properties field="mapperLocations" class="com.demo.springcloud.alibaba.config.DataSourceProxyConfig" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
