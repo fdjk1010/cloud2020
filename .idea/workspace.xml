@@ -2,42 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/seata-account-service2003.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/SeataAccountMainApp2003.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/config/DataSourceProxyConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/config/MyBatisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/controller/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/entity/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/entity/CommonResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/mapper/AccountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/resources/file.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/resources/mapper/AccountMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/resources/registry.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/seata-storage-service2002.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/java/com/demo/springcloud/alibaba/SeataStorageServiceApplication2002.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/java/com/demo/springcloud/alibaba/config/DataSourceProxyConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/java/com/demo/springcloud/alibaba/config/MyBatisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/java/com/demo/springcloud/alibaba/controller/StorageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/java/com/demo/springcloud/alibaba/entity/CommonResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/java/com/demo/springcloud/alibaba/entity/Storage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/java/com/demo/springcloud/alibaba/mapper/StorageMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/java/com/demo/springcloud/alibaba/service/StorageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/java/com/demo/springcloud/alibaba/service/impl/StorageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/resources/file.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/resources/mapper/StorageMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seata-storage-service2002/src/main/resources/registry.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/StorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/StorageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seata-order-service2001/src/main/resources/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/service/impl/AccountServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -597,14 +563,7 @@
       <workItem from="1619485092946" duration="15853000" />
       <workItem from="1619572385874" duration="12859000" />
       <workItem from="1619662449055" duration="14437000" />
-      <workItem from="1619745063291" duration="12308000" />
-    </task>
-    <task id="LOCAL-00008" summary="cloud-provider-payment8001:&#10;  @EnableDiscoveryClient//服务发现client端   的使用">
-      <created>1618278246589</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1618278246590</updated>
+      <workItem from="1619745063291" duration="12863000" />
     </task>
     <task id="LOCAL-00009" summary="cloud-provider-payment8001:&#10;cloud-eureka-server7001:&#10;  实现自我保护机制关闭，集群改单机，测试">
       <created>1618280398120</created>
@@ -942,7 +901,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619688861768</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="seata-order-service2001:&#10;seata-account-service2003:&#10;seata-storage-service2002:&#10;   三者业务代码联调测试成功">
+      <created>1619771765928</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1619771765928</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -965,7 +931,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cloud-stream-rabbitmq-provider8801:&#10;   Stream消息驱动之生产者业务逻辑构建完成" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8802:&#10;   Stream消息驱动之消费者业务逻辑构建完成，能收到生产者发送的消息" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8802:&#10;   bug" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  目前是8802和8803同时收到了，存在重复消费问题&#10;  可以使用Stream中的消费分组来解决：&#10;  &#9;不同的组可以全面消费的（重复消费），同一组内会发生竞争关系，只是其中一个可以消费&#10;  默认都是不同的组，" />
@@ -990,7 +955,8 @@
     <MESSAGE value="cloudalibaba-sentinel-service8401:&#10;   &#9;sentinel整合ribbon+openFeign+fallback实现综合的熔断降级等等,直接关闭服务端，进入兜底方法" />
     <MESSAGE value="cloudalibaba-sentinel-service8401:&#10;   &#9;sentinel手动持久化，通过nacos配置文件，保存Sentinel配置，避免消失问题" />
     <MESSAGE value="seata-order-service2001:&#10;    seata与客户端链条业务模块，启动项目成功" />
-    <option name="LAST_COMMIT_MESSAGE" value="seata-order-service2001:&#10;    seata与客户端链条业务模块，启动项目成功" />
+    <MESSAGE value="seata-order-service2001:&#10;seata-account-service2003:&#10;seata-storage-service2002:&#10;   三者业务代码联调测试成功" />
+    <option name="LAST_COMMIT_MESSAGE" value="seata-order-service2001:&#10;seata-account-service2003:&#10;seata-storage-service2002:&#10;   三者业务代码联调测试成功" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="151" key="#Project_Structure" timestamp="1618905791256">
@@ -1016,11 +982,11 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1500.960@0.0.1500.960" timestamp="1618370169710" />
-    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2" timestamp="1619688860826">
+    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2" timestamp="1619771764919">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="275" y="80" width="1225" height="872" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618566769585" />
-    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619688860826" />
+    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619771764919" />
     <state width="584" height="466" key="DebuggerActiveHint" timestamp="1619686956933">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -1039,42 +1005,42 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="484" y="129" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1619425210862" />
-    <state width="1036" height="288" key="GridCell.Tab.0.bottom" timestamp="1619771713608">
+    <state width="723" height="231" key="GridCell.Tab.0.bottom" timestamp="1619772287903">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="288" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619771713608" />
-    <state width="1036" height="288" key="GridCell.Tab.0.center" timestamp="1619771713608">
+    <state width="723" height="231" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
+    <state width="723" height="231" key="GridCell.Tab.0.center" timestamp="1619772287903">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="288" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619771713608" />
-    <state width="1036" height="288" key="GridCell.Tab.0.left" timestamp="1619771713608">
+    <state width="723" height="231" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
+    <state width="723" height="231" key="GridCell.Tab.0.left" timestamp="1619772287903">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="288" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619771713608" />
-    <state width="1036" height="288" key="GridCell.Tab.0.right" timestamp="1619771713608">
+    <state width="723" height="231" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
+    <state width="723" height="231" key="GridCell.Tab.0.right" timestamp="1619772287903">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="288" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619771713608" />
-    <state width="1036" height="288" key="GridCell.Tab.1.bottom" timestamp="1619771713608">
+    <state width="723" height="231" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
+    <state width="723" height="231" key="GridCell.Tab.1.bottom" timestamp="1619772287903">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="288" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619771713608" />
-    <state width="1036" height="288" key="GridCell.Tab.1.center" timestamp="1619771713608">
+    <state width="723" height="231" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
+    <state width="723" height="231" key="GridCell.Tab.1.center" timestamp="1619772287903">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="288" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1619771713608" />
-    <state width="1036" height="288" key="GridCell.Tab.1.left" timestamp="1619771713608">
+    <state width="723" height="231" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
+    <state width="723" height="231" key="GridCell.Tab.1.left" timestamp="1619772287903">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="288" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1619771713608" />
-    <state width="1036" height="288" key="GridCell.Tab.1.right" timestamp="1619771713608">
+    <state width="723" height="231" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
+    <state width="723" height="231" key="GridCell.Tab.1.right" timestamp="1619772287903">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="288" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1619771713608" />
+    <state width="723" height="231" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
     <state width="1036" height="477" key="GridCell.Tab.2.bottom" timestamp="1619687000003">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -1106,11 +1072,11 @@
     </state>
     <state x="274" y="111" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1618476095522" />
     <state x="268" y="11" width="1038" height="822" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619768169992" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1619688866219">
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1619771772826">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618566772618" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619688866219" />
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619771772826" />
     <state x="444" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1619745069097">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
