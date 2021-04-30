@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author lzy
  * @date 2021/4/29 15:35
  */
-@FeignClient(value = "seate-storage-service")
+@FeignClient(value = "seata-storage-service")
 public interface StorageService {
     @PostMapping("/storage/decrease")
     CommonResult decrease(@RequestParam("productId") Long productId,@RequestParam("count")Integer count);
