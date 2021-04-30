@@ -5,6 +5,7 @@ import com.demo.springcloud.alibaba.mapper.OrderMapper;
 import com.demo.springcloud.alibaba.service.AccountService;
 import com.demo.springcloud.alibaba.service.OrderService;
 import com.demo.springcloud.alibaba.service.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +26,8 @@ public class OrderServiceImpl implements OrderService {
     private AccountService accountService;
 
     @Override
+    //name随便取，唯一性，rollbackFor，选择回滚异常类型，当前所有异常回滚
+    @GlobalTransactional(name = "fsp-create-order",rollbackFor = Exception.class)//全局事务回滚
     public void create(Order order) {
         log.info("----->开始新建订单");
         //1、新建订单

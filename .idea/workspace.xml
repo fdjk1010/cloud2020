@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/impl/OrderServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -563,14 +563,7 @@
       <workItem from="1619485092946" duration="15853000" />
       <workItem from="1619572385874" duration="12859000" />
       <workItem from="1619662449055" duration="14437000" />
-      <workItem from="1619745063291" duration="12863000" />
-    </task>
-    <task id="LOCAL-00009" summary="cloud-provider-payment8001:&#10;cloud-eureka-server7001:&#10;  实现自我保护机制关闭，集群改单机，测试">
-      <created>1618280398120</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1618280398120</updated>
+      <workItem from="1619745063291" duration="13087000" />
     </task>
     <task id="LOCAL-00010" summary="cloud-provider-payment8004:&#10;业务代码上传，测试zookeeper">
       <created>1618297656685</created>
@@ -908,7 +901,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619771765928</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="seata-account-service2003:&#10;   模拟故障：AccountServiceImpl添加超时&#10;   &#9;当库存和账户余额扣减后，订单状态并没有设置为已经完成，没有从零改为1&#10;   &#9;而且由于feign的重试机制，账户余额还有可能被多次扣减">
+      <created>1619772318478</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1619772318478</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -931,7 +931,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cloud-stream-rabbitmq-consumer8802:&#10;   Stream消息驱动之消费者业务逻辑构建完成，能收到生产者发送的消息" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8802:&#10;   bug" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  目前是8802和8803同时收到了，存在重复消费问题&#10;  可以使用Stream中的消费分组来解决：&#10;  &#9;不同的组可以全面消费的（重复消费），同一组内会发生竞争关系，只是其中一个可以消费&#10;  默认都是不同的组，" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  8802/8803都变成不同组，重复消费&#10;  group: demoA&#10;  group：demoB" />
@@ -956,7 +955,8 @@
     <MESSAGE value="cloudalibaba-sentinel-service8401:&#10;   &#9;sentinel手动持久化，通过nacos配置文件，保存Sentinel配置，避免消失问题" />
     <MESSAGE value="seata-order-service2001:&#10;    seata与客户端链条业务模块，启动项目成功" />
     <MESSAGE value="seata-order-service2001:&#10;seata-account-service2003:&#10;seata-storage-service2002:&#10;   三者业务代码联调测试成功" />
-    <option name="LAST_COMMIT_MESSAGE" value="seata-order-service2001:&#10;seata-account-service2003:&#10;seata-storage-service2002:&#10;   三者业务代码联调测试成功" />
+    <MESSAGE value="seata-account-service2003:&#10;   模拟故障：AccountServiceImpl添加超时&#10;   &#9;当库存和账户余额扣减后，订单状态并没有设置为已经完成，没有从零改为1&#10;   &#9;而且由于feign的重试机制，账户余额还有可能被多次扣减" />
+    <option name="LAST_COMMIT_MESSAGE" value="seata-account-service2003:&#10;   模拟故障：AccountServiceImpl添加超时&#10;   &#9;当库存和账户余额扣减后，订单状态并没有设置为已经完成，没有从零改为1&#10;   &#9;而且由于feign的重试机制，账户余额还有可能被多次扣减" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="151" key="#Project_Structure" timestamp="1618905791256">
@@ -982,11 +982,11 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1500.960@0.0.1500.960" timestamp="1618370169710" />
-    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2" timestamp="1619771764919">
+    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2" timestamp="1619772317693">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="275" y="80" width="1225" height="872" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618566769585" />
-    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619771764919" />
+    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619772317693" />
     <state width="584" height="466" key="DebuggerActiveHint" timestamp="1619686956933">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -1005,42 +1005,42 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="484" y="129" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1619425210862" />
-    <state width="723" height="231" key="GridCell.Tab.0.bottom" timestamp="1619772287903">
+    <state width="1036" height="231" key="GridCell.Tab.0.bottom" timestamp="1619772681799">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="723" height="231" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
-    <state width="723" height="231" key="GridCell.Tab.0.center" timestamp="1619772287903">
+    <state width="1036" height="231" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
+    <state width="1036" height="231" key="GridCell.Tab.0.center" timestamp="1619772681799">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="723" height="231" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
-    <state width="723" height="231" key="GridCell.Tab.0.left" timestamp="1619772287903">
+    <state width="1036" height="231" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
+    <state width="1036" height="231" key="GridCell.Tab.0.left" timestamp="1619772681799">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="723" height="231" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
-    <state width="723" height="231" key="GridCell.Tab.0.right" timestamp="1619772287903">
+    <state width="1036" height="231" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
+    <state width="1036" height="231" key="GridCell.Tab.0.right" timestamp="1619772681799">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="723" height="231" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
-    <state width="723" height="231" key="GridCell.Tab.1.bottom" timestamp="1619772287903">
+    <state width="1036" height="231" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
+    <state width="1036" height="231" key="GridCell.Tab.1.bottom" timestamp="1619772681799">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="723" height="231" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
-    <state width="723" height="231" key="GridCell.Tab.1.center" timestamp="1619772287903">
+    <state width="1036" height="231" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
+    <state width="1036" height="231" key="GridCell.Tab.1.center" timestamp="1619772681799">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="723" height="231" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
-    <state width="723" height="231" key="GridCell.Tab.1.left" timestamp="1619772287903">
+    <state width="1036" height="231" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
+    <state width="1036" height="231" key="GridCell.Tab.1.left" timestamp="1619772681799">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="723" height="231" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
-    <state width="723" height="231" key="GridCell.Tab.1.right" timestamp="1619772287903">
+    <state width="1036" height="231" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
+    <state width="1036" height="231" key="GridCell.Tab.1.right" timestamp="1619772681799">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="723" height="231" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1619772287903" />
+    <state width="1036" height="231" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
     <state width="1036" height="477" key="GridCell.Tab.2.bottom" timestamp="1619687000003">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -1072,11 +1072,11 @@
     </state>
     <state x="274" y="111" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1618476095522" />
     <state x="268" y="11" width="1038" height="822" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619768169992" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1619771772826">
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1619772320097">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618566772618" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619771772826" />
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619772320097" />
     <state x="444" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1619745069097">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -1086,11 +1086,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="0" y="73" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1619680448487" />
-    <state x="559" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619490411190">
+    <state x="559" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619772367019">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="546" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1618191397205" />
-    <state x="559" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1619490411190" />
+    <state x="559" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1619772367019" />
     <state x="729" y="320" width="641" height="534" key="find.popup" timestamp="1618211047439">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -1113,11 +1113,11 @@
     </state>
     <state x="937" y="327" width="672" height="677" key="run.anything.popup/0.0.1500.960@0.0.1500.960" timestamp="1618191773470" />
     <state x="959" y="284" width="689" height="589" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1619490739161" />
-    <state x="638" y="282" width="689" height="590" key="search.everywhere.popup" timestamp="1619578666392">
+    <state x="638" y="282" width="689" height="590" key="search.everywhere.popup" timestamp="1619772375500">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="623" y="327" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1618474270504" />
-    <state x="638" y="282" width="689" height="590" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1619578666392" />
+    <state x="638" y="282" width="689" height="590" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1619772375500" />
     <state x="338" y="190" key="spring file set editor" timestamp="1619768168226">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -1164,7 +1164,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/impl/OrderServiceImpl.java</url>
-          <line>39</line>
+          <line>42</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
