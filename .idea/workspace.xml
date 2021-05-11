@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ae0e06d-e0d3-42ee-b0f4-b1f925d2a577" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/springboot-redis/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-redis/springboot-redis.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-redis/src/main/java/com/demo/springboot/RedisSpringbootApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-redis/src/main/java/com/demo/springboot/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-redis/src/main/java/com/demo/springboot/controller/RedisTestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +62,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/seata-account-service2003/src/main/java/com/demo/springcloud/alibaba/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -75,11 +83,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desktop\springcloud工具\cloud2020\springboot-redis\src\main\resources" />
       <recent name="D:\Desktop\springcloud工具\cloud2020\seata-account-service2003\src\main\java\com\demo\springcloud\alibaba\config" />
       <recent name="D:\Desktop\springcloud工具\cloud2020\seata-account-service2003\src\main\resources" />
       <recent name="D:\Desktop\springcloud工具\cloud2020\seata-storage-service2002\src\main\java\com\demo\springcloud\alibaba\config" />
       <recent name="D:\Desktop\springcloud工具\cloud2020\seata-storage-service2002\src\main\resources" />
-      <recent name="D:\Desktop\springcloud工具\cloud2020\cloudalibaba-sentinel-service8401\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -89,7 +97,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SeataAccountMainApp2003">
+  <component name="RunManager" selected="Spring Boot.RedisSpringbootApplication">
     <configuration name="T2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="T2" />
       <module name="cloud-gateway-gateway9527" />
@@ -378,6 +386,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RedisSpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="springboot-redis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.springboot.RedisSpringbootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SeataAccountMainApp2003" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="seata-account-service2003" />
       <extension name="coverage">
@@ -487,9 +508,11 @@
       <item itemvalue="Spring Boot.SeataOrderMainApp2001" />
       <item itemvalue="Spring Boot.SeataStorageServiceApplication2002" />
       <item itemvalue="Spring Boot.SeataAccountMainApp2003" />
+      <item itemvalue="Spring Boot.RedisSpringbootApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.RedisSpringbootApplication" />
         <item itemvalue="Spring Boot.SeataAccountMainApp2003" />
         <item itemvalue="Application.T2" />
       </list>
@@ -509,7 +532,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Failed" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -563,14 +586,12 @@
       <workItem from="1619485092946" duration="15853000" />
       <workItem from="1619572385874" duration="12859000" />
       <workItem from="1619662449055" duration="14437000" />
-      <workItem from="1619745063291" duration="13087000" />
-    </task>
-    <task id="LOCAL-00010" summary="cloud-provider-payment8004:&#10;业务代码上传，测试zookeeper">
-      <created>1618297656685</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1618297656685</updated>
+      <workItem from="1619745063291" duration="13965000" />
+      <workItem from="1620264650821" duration="5190000" />
+      <workItem from="1620438007492" duration="184000" />
+      <workItem from="1620460152354" duration="480000" />
+      <workItem from="1620460649762" duration="11000" />
+      <workItem from="1620726057707" duration="527000" />
     </task>
     <task id="LOCAL-00011" summary="cloud-consumerzk-order80:&#10;    测试zookeeper,互相调用，替代eureka">
       <created>1618298523423</created>
@@ -908,7 +929,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619772318478</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="seata-order-service2001:&#10;  只需要在调用服务的客户端加上@GlobalTransactional注解，即可全局回滚，在impl类入口处方法上添加&#10;  &#9;//name随便取，唯一性，rollbackFor，选择回滚异常类型，当前所有异常回滚&#10;      @GlobalTransactional(name = &quot;fsp-create-order&quot;,rollbackFor = Exception.class)//全局事务回滚&#10;  &#9;public void create(Order order) {">
+      <created>1619772747987</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1619772747987</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -931,7 +959,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cloud-stream-rabbitmq-consumer8802:&#10;   bug" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  目前是8802和8803同时收到了，存在重复消费问题&#10;  可以使用Stream中的消费分组来解决：&#10;  &#9;不同的组可以全面消费的（重复消费），同一组内会发生竞争关系，只是其中一个可以消费&#10;  默认都是不同的组，" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  8802/8803都变成不同组，重复消费&#10;  group: demoA&#10;  group：demoB" />
     <MESSAGE value="cloud-stream-rabbitmq-consumer8803:&#10;cloud-stream-rabbitmq-consumer8802:&#10;  8802/8803都变成同一组，避免重复消费，轮询通知&#10;  group: demo&#10;  group：demo" />
@@ -956,14 +983,15 @@
     <MESSAGE value="seata-order-service2001:&#10;    seata与客户端链条业务模块，启动项目成功" />
     <MESSAGE value="seata-order-service2001:&#10;seata-account-service2003:&#10;seata-storage-service2002:&#10;   三者业务代码联调测试成功" />
     <MESSAGE value="seata-account-service2003:&#10;   模拟故障：AccountServiceImpl添加超时&#10;   &#9;当库存和账户余额扣减后，订单状态并没有设置为已经完成，没有从零改为1&#10;   &#9;而且由于feign的重试机制，账户余额还有可能被多次扣减" />
-    <option name="LAST_COMMIT_MESSAGE" value="seata-account-service2003:&#10;   模拟故障：AccountServiceImpl添加超时&#10;   &#9;当库存和账户余额扣减后，订单状态并没有设置为已经完成，没有从零改为1&#10;   &#9;而且由于feign的重试机制，账户余额还有可能被多次扣减" />
+    <MESSAGE value="seata-order-service2001:&#10;  只需要在调用服务的客户端加上@GlobalTransactional注解，即可全局回滚，在impl类入口处方法上添加&#10;  &#9;//name随便取，唯一性，rollbackFor，选择回滚异常类型，当前所有异常回滚&#10;      @GlobalTransactional(name = &quot;fsp-create-order&quot;,rollbackFor = Exception.class)//全局事务回滚&#10;  &#9;public void create(Order order) {" />
+    <option name="LAST_COMMIT_MESSAGE" value="seata-order-service2001:&#10;  只需要在调用服务的客户端加上@GlobalTransactional注解，即可全局回滚，在impl类入口处方法上添加&#10;  &#9;//name随便取，唯一性，rollbackFor，选择回滚异常类型，当前所有异常回滚&#10;      @GlobalTransactional(name = &quot;fsp-create-order&quot;,rollbackFor = Exception.class)//全局事务回滚&#10;  &#9;public void create(Order order) {" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="151" key="#Project_Structure" timestamp="1618905791256">
+    <state x="0" y="151" key="#Project_Structure" timestamp="1620726229687">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="0" y="279" key="#Project_Structure/0.0.1500.960@0.0.1500.960" timestamp="1618370026430" />
-    <state x="0" y="151" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1618905791256" />
+    <state x="0" y="151" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1620726229687" />
     <state x="266" y="144" width="1164" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619753028264">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -982,11 +1010,11 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="449" y="778" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1500.960@0.0.1500.960" timestamp="1618370169710" />
-    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2" timestamp="1619772317693">
+    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2" timestamp="1619772747170">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="275" y="80" width="1225" height="872" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1618566769585" />
-    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619772317693" />
+    <state x="266" y="18" width="1048" height="740" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1619772747170" />
     <state width="584" height="466" key="DebuggerActiveHint" timestamp="1619686956933">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -996,51 +1024,51 @@
     </state>
     <state x="536" y="251" width="892" height="539" key="DiffContextDialog/0.0.1500.960@0.0.1500.960" timestamp="1618192491508" />
     <state x="294" y="131" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1618905752072" />
-    <state x="922" y="195" key="FileChooserDialogImpl" timestamp="1619768167127">
+    <state x="922" y="195" key="FileChooserDialogImpl" timestamp="1620726222181">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="900" y="224" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1618566079885" />
-    <state x="922" y="195" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1619768167127" />
+    <state x="922" y="195" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1620726222181" />
     <state x="484" y="129" key="GrepConsoleSettings" timestamp="1619425210862">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="484" y="129" key="GrepConsoleSettings/0.0.1536.834@0.0.1536.834" timestamp="1619425210862" />
-    <state width="1036" height="231" key="GridCell.Tab.0.bottom" timestamp="1619772681799">
+    <state width="1036" height="339" key="GridCell.Tab.0.bottom" timestamp="1620726784876">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="231" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
-    <state width="1036" height="231" key="GridCell.Tab.0.center" timestamp="1619772681799">
+    <state width="1036" height="339" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1620726784876" />
+    <state width="1036" height="339" key="GridCell.Tab.0.center" timestamp="1620726784876">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="231" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
-    <state width="1036" height="231" key="GridCell.Tab.0.left" timestamp="1619772681799">
+    <state width="1036" height="339" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1620726784876" />
+    <state width="1036" height="339" key="GridCell.Tab.0.left" timestamp="1620726784876">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="231" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
-    <state width="1036" height="231" key="GridCell.Tab.0.right" timestamp="1619772681799">
+    <state width="1036" height="339" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1620726784876" />
+    <state width="1036" height="339" key="GridCell.Tab.0.right" timestamp="1620726784876">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="870" height="168" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1618800480445" />
-    <state width="1036" height="231" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
-    <state width="1036" height="231" key="GridCell.Tab.1.bottom" timestamp="1619772681799">
+    <state width="1036" height="339" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1620726784876" />
+    <state width="1036" height="339" key="GridCell.Tab.1.bottom" timestamp="1620726784877">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="231" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
-    <state width="1036" height="231" key="GridCell.Tab.1.center" timestamp="1619772681799">
+    <state width="1036" height="339" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1620726784877" />
+    <state width="1036" height="339" key="GridCell.Tab.1.center" timestamp="1620726784877">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="231" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
-    <state width="1036" height="231" key="GridCell.Tab.1.left" timestamp="1619772681799">
+    <state width="1036" height="339" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1620726784877" />
+    <state width="1036" height="339" key="GridCell.Tab.1.left" timestamp="1620726784877">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="231" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
-    <state width="1036" height="231" key="GridCell.Tab.1.right" timestamp="1619772681799">
+    <state width="1036" height="339" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1620726784877" />
+    <state width="1036" height="339" key="GridCell.Tab.1.right" timestamp="1620726784877">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1036" height="231" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1619772681799" />
+    <state width="1036" height="339" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1620726784877" />
     <state width="1036" height="477" key="GridCell.Tab.2.bottom" timestamp="1619687000003">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -1067,21 +1095,21 @@
     </state>
     <state x="0" y="286" key="Registry/0.0.1500.960@0.0.1500.960" timestamp="1618219732716" />
     <state x="331" y="140" key="Registry/0.0.1536.834@0.0.1536.834" timestamp="1619487242768" />
-    <state x="268" y="11" width="1038" height="822" key="SettingsEditor" timestamp="1619768169992">
+    <state x="268" y="11" width="1038" height="822" key="SettingsEditor" timestamp="1620726225590">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="274" y="111" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1618476095522" />
-    <state x="268" y="11" width="1038" height="822" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619768169992" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1619772320097">
+    <state x="268" y="11" width="1038" height="822" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1620726225590" />
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2" timestamp="1620264669139">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="343" y="202" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1618566772618" />
-    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1619772320097" />
-    <state x="444" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1619745069097">
+    <state x="351" y="175" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1620264669139" />
+    <state x="444" y="264" key="com.intellij.ide.util.TipDialog" timestamp="1620460649828">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="434" y="304" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1618799177397" />
-    <state x="444" y="264" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1619745069097" />
+    <state x="444" y="264" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1620460649828" />
     <state x="0" y="73" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1619680448487">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -1099,11 +1127,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="477" y="208" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1618823181584" />
-    <state x="356" y="213" width="1266" height="608" key="new project wizard" timestamp="1619753475478">
+    <state x="356" y="213" width="1266" height="608" key="new project wizard" timestamp="1620726091500">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="234" y="352" width="1266" height="608" key="new project wizard/0.0.1500.960@0.0.1500.960" timestamp="1618796046105" />
-    <state x="356" y="213" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1619753475478" />
+    <state x="356" y="213" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1620726091500" />
     <state x="454" y="107" key="refactoring.ChangeSignatureDialog" timestamp="1618131518885">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -1118,11 +1146,11 @@
     </state>
     <state x="623" y="327" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1618474270504" />
     <state x="638" y="282" width="689" height="590" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1619772375500" />
-    <state x="338" y="190" key="spring file set editor" timestamp="1619768168226">
+    <state x="338" y="190" key="spring file set editor" timestamp="1620726223707">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="330" y="219" key="spring file set editor/0.0.1500.960@0.0.1500.960" timestamp="1618476093178" />
-    <state x="338" y="190" key="spring file set editor/0.0.1536.834@0.0.1536.834" timestamp="1619768168226" />
+    <state x="338" y="190" key="spring file set editor/0.0.1536.834@0.0.1536.834" timestamp="1620726223707" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1161,11 +1189,6 @@
           <url>file://$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/config/DataSourceProxyConfig.java</url>
           <line>45</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/seata-order-service2001/src/main/java/com/demo/springcloud/alibaba/service/impl/OrderServiceImpl.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/cloud-config-client-3366/src/main/java/com/demo/springcloud/controller/ConfigClientController.java</url>
