@@ -1,0 +1,965 @@
+1、springboot与springcloud版本选择
+springcloud用H版，https://spring.io/projects/spring-cloud
+这个网站拉到最下面，有boot最合适的版本，，H版对应的2.2.M4 and <2.2.5
+本次学习的版本  cloud Hoxton.SR1
+				boot  2.2.2.RELEASE
+				cloud alibaba 2.1.0.RELEASE
+				java  java8
+				maven 3.5及以上
+				mysql 5.7及以上
+				
+以前   服务注册与发现--EUREKA
+	   服务负载与调用--NETFLIX OSS RIBBON
+	   服务负载与调用--NETFLIX FEIGN
+	   服务熔断降级  --HYSTRIX
+	   服务网关      --NETFLIX OSS ZUUL
+	   服务分布式配置--SpringCloud Config
+	   服务于开发    --springboot
+	   
+now2020    服务注册中心-- Eureka(停止更新)（有略卡） ×
+					   -- Zookeeper （如k【一声】po【二声】）√
+					   -- Consul(不推荐) （看solo）√
+					   -- Nacos(推荐) √
+					   
+		   服务调用    --Ribbon（瑞本）
+					   --LoadBalancer
+					   
+		   服务调用2   --Feign  ×
+					   --OpenFeign √
+					   
+		   服务降级    --Hystrix  （嘿死jui【四声】死）×
+					   --resilience4j  √
+					   --Sentinel(阿里巴巴) √
+					   
+		   服务网关    --zuul  ×
+					   --zuul2 ！
+					   --gateway  √
+					   
+		   服务配置    --Config ×
+					   --Nacos  √
+					   
+		   服务总线    --Bus  ×
+		               --Nacos √
+					   
+					   
+总父工程
+	微服务模块
+		1、建module
+		2、改pom
+		3、写yml
+		4、主启动
+		5、业务类
+		
+使用Eureka集群，需要修改映射文件，找到C:\Windows\System32\drivers\etc路径下的hosts文件，打开配置：
+	127.0.0.1 eureka7001.com
+	127.0.0.1 eureka7002.com
+
+    public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
+	
+	@LoadBalanced//Eureake负载均衡，默认轮回
+	
+主机名称的修改
+	instance:
+		instance-id: payment8002
+以及ip提示
+		prefer-ip-address: true#访问路径可以显示ip地址
+	
+	
+组件名 		语言 cap 			服务健康检查 对外暴露接口 springcloud集成
+Eureka 		java ap(高可用) 	  可配支持 		http 		已集成
+Consul 		go   cp(数据一致) 		 支持         http/dns     已集成
+Zookeeper   java cp   				 支持			客户端			已集成
+
+
+Ribbon
+pom文件引入netflix-eureka-client的jar包中包含ribbon的jar包
+ribbon默认轮询负载均衡
+IRule自带：
+	com.netflix.loadbalancer.RoundRobinRule	轮询
+	com.netflix.loadbalancer.RandomRule		随机
+	com.netflix.loadbalancer.RetryRule		先按照轮询获取服务，如果获取服务失败则在指定时间内会进行重试
+	WeightedResponseTimeRule				对轮询的扩展，响应速度越快的实例选择权重越大，越容易被选择
+	BestAvailableRule						会先过滤掉由于多次访问故障而处于断路跳闸状态的服务，然后选择一个并发量量小的服务
+	AvailabilityFilteringRule				先过滤掉故障实例，再选择并发较小的实例
+	ZoneAvoidanceRule						默认规则，复合判断server所在区域的性能和server的可用性选择服务器
+	
+负载均衡默认轮询算法：rest接口第几次请求数%服务器集群总数量=实际调用服务器位置下标，每次服务重启动后rest接口计数从1开始
+项目案例：总计数2台   8001,8002
+			list=2 instance
+			1 % 2 =1-》index=1 list.get(index);
+			2 % 2 =0-》index=0 list.get(index);
+			3 % 2 =1-》index=1 list.get(index);
+			
+			
+			服务重启
+			1
+			2
+			3
+			
+		IRule--RoundRobinRule
+		底层原理CAS，自旋锁（视频在java面试，互联网大厂高频重点面试题）
+
+手写一个负载的算法
+原理+JUC(CAS+自旋锁的复习)
+
+区别与联系
+Ribbon客户端负载均衡。
+Nginx是服务端负载均衡。
+openFeign是对ribbon做了进一步的封装
+
+OpenFeign
+引入:
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-openfeign</artifactId>
+	</dependency>
+
+@Component
+@FeignClient(value = "CLOUD-PAYMENT-SERVICE")
+public interface PaymentFeignService {
+    @GetMapping("/payment/get/{id}")//对应的8001的controller
+    public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
+}
+
+OpenFeign超时控制：
+	默认feign客户端只等待1秒钟，但是服务端处理需要超过1秒钟，导致feign客户端不想等待了，直接返回报错
+为了避免这样的情况，有时候我们需要设置Feign客户端的超时控制
+
+yml文件中开启配置
+	#设置feign客户端超时时间(OpenFeign默认支持ribbon)
+	ribbon:
+		#指的是建立连接所用的时间，适用于网络状况正常的情况下，两端连接所有的时间
+		ReadTimeout: 5000 #5秒
+		#指的是建立连接后从服务器读取到可用资源所用的时间
+		ConnectTimeout: 5000 #5秒
+		
+OpenFeign日志打印功能：
+	NONE:默认的，不显示任何日志
+	BASIC:仅记录请求方法、URL、响应状态码及执行时间
+	HEADERS:除了BASIC中定义的信息之外，还有请求和响应头信息
+	FULL:除了HEADERS中定义的信息之外，还有请求和响应的正文及元数据
+
+
+||||
+中级
+Hystrix:服务降级，服务断路，延迟和容错的开源库
+	服务雪崩：多个微服务之间调用的时候，假设微服务a调用微服务b和微服务c，
+微服务b和微服务c又调用其他微服务，这就是所谓的“扇出”，如果扇出的链路上
+某个微服务的调用响应时间过长或者不可用，对微服务a的调用就会占用越来越多的
+系统资源，进而引起系统崩溃，所谓的“雪崩效应”。
+
+主要用于：服务降级，服务熔断，接近实时的监控。。。。
+Hystrix重要概念：
+	服务降级(fallback)---程序运行异常，超时，服务熔断触发服务降级，线程池/信号量打满也会导致服务降级
+	服务熔断(break)---类比保险丝达到最大服务访问后，直接拒绝访问，拉闸限电，然后调用服务降级的方法
+	服务限流(flowlimit)---秒杀高并发等操作，严禁一窝蜂的过来拥挤，大家排队，一秒钟N个，有序进行
+	
+高并发压力测试
+通过JMeter工具压力测试（20000线程访问http://localhost:8001/payment/hystrix/timeout/331）延时3秒，导致秒回的结果也拖慢速度
+tomcat默认的工作线程数被打满了，没有多余的线程来分解压力和处理
+
+hystrix在客户端服务端都可以用，主要用在客户端
+
+超时导致服务器变慢(转圈)---超时不再等待
+出错(宕机或程序运行出错)---出错要有兜底
+解决：
+	1、对服务8001超时了，调用者80不能一直卡死等待，必须有服务降级
+	2、对服务8001down机了，调用者80不能一直卡死等待，必须有服务降级
+	3、对服务8001ok，调用者80自己出故障或有自我要求(自己的等待时间小于服务提供者)，自己处理降级
+
+一、服务降级
+降级配置  fallback服务降级
+	/**
+     * @HystrixCommand
+     * (fallbackMethod)paymentInfo_TimeOut如果这个方法出事了，让paymentInfo_TimeOutHandler方法给我兜底
+     * (commandProperties)设置调用超时时间3秒钟，3秒以内走原逻辑,原方法出错也走兜底方法
+     * @param id
+     * @return
+     */
+	@HystrixCommand(fallbackMethod = "paymentTimeOutFallbackMethod",commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "1500")
+    })
+每个业务方法对应一个兜底的方法，代码膨胀
+统一和自定义的分开
+
+在controller层做兜底降级
+	//全局默认的fallback降级处理，hystrix,兜底
+	@DefaultProperties(defaultFallback = "payment_Global_FallbackMethod")
+	
+	
+解耦加降级
+主要异常：运行、超时、宕机
+#用于服务降级 在注解@FeignClient中添加fallbackFactory属性
+feign:
+  hystrix:
+    enabled: true #在feign中开启Hystrix
+	
+	
+@Component
+public class PaymentFallbackService implements PaymentHystrixService{
+    @Override
+    public String paymentInfo_Ok(Integer id) {
+        return "PaymentFallbackService,fallback--paymentInfo_Ok";
+    }
+
+    @Override
+    public String paymentInfo_TimeOut(Integer id) {
+        return "PaymentFallbackService,fallback--paymentInfo_TimeOut";
+    }
+}
+
+
+@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT",fallback = PaymentFallbackService.class)
+public interface PaymentHystrixService {
+
+二、服务熔断
+	熔断机制是对应雪崩效应的一种微服务链路保护机制，当扇出链路的某个微服务出错不可用或者相应时间太长时，
+	会进行服务的降级，进而熔断该节点微服务的调用，快速返回错误的相应信息。
+	当检测到该节点微服务调用相应正常后，恢复调用链路
+	（慢慢的恢复正常，达到一定正确率）
+	
+	（开启熔断，在固定时间窗口内，接口调用超时比率达到一个阈值，会开启熔断
+	进入熔断状态，后续对该服务接口的调用不再经过网络，直接执行本地的默认方法
+	，达到服务降级的效果。
+	熔断恢复，熔断不可能是永久的，当经过了规定时间之后，服务将从熔断状态恢复过来，
+	再次接受调用放的远程调用。）
+	
+	//======服务熔断
+    @HystrixCommand(fallbackMethod = "paymentCircuitBreaker_fallback",commandProperties = {
+            @HystrixProperty(name = "circuitBreaker.enabled",value = "true"),//是否开启断路器
+            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold",value = "10"),//请求次数
+            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds",value = "10000"),//时间窗口期 10秒钟
+            @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage",value = "60")//失败率达到多少后跳闸 60%
+    })
+	
+	HystrixCommandProperties.class中找到对应的HystrixProperty-->name
+	或者All配置讲解61集
+	
+涉及到断路器的三个重要参数：快照时间窗(circuitBreaker.sleepWindowInMilliseconds)、请求总数阈值(circuitBreaker.requestVolumeThreshold)、错误百分比阈值(circuitBreaker.errorThresholdPercentage)
+	1、时间窗口期：断路器确定是否打开需要统计一些请求和错误数据，而统计的时间范围就是快照时间窗，默认为最近的10秒。
+	
+	2、请求总数阈值：在快照时间窗内，必须满足请求总数阈值才有资格熔断，默认为20，意味着10秒内，如果该hystrix命令的调用次数不足20次，即使所有请求都超时或其他原因失败，断路器都不会打开。
+	
+	3、错误百分比阈值：当请求总数在快照时间窗口超过了阈值，比如发生了30次调用，如果在这30次调用中，有15次发生了超时异常，也就是超过50%的错误百分比，在默认设定50%阈值情况下，这时候就会将断路器打开。
+
+hystrix为我们实现了自动恢复功能，当断路器打开，对主逻辑进行熔断之后，hystrix会启动一个休眠时间窗，在这个时间窗内，降级逻辑是临时的成为主逻辑，当休眠时间窗到期，断路器将进入半开状态，释放一次请求到原来的主逻辑上，如果此次请求正常返回，那么断路器将继续闭合，主逻辑恢复，如果这次请求依然有问题，断路器继续进入打开状态，休眠时间床重新计时。
+
+	
+三、服务监控hystrixDashboard
+http://localhost:9001/hystrix
+被监控的微服务必须要注意：
+	<!--图形化监控必须要web，actuator-->
+       <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-web</artifactId>
+       </dependency>
+       <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-actuator</artifactId>
+       </dependency>
+以及
+	如果启动类不加，会报错Unable to connect to command metric stream.
+	
+	/**
+     * 此配置是为了服务监控而配置，与服务容错本身无关，springcloud升级后的坑
+     * servletRegistrationBean因为springboot的默认路径不是"/hystrix.stream",
+     * 只要在自己的项目里配置上下面的servlet就可以了
+     */
+    @Bean
+    public ServletRegistrationBean getServlet(){
+        HystrixMetricsStreamServlet streamServlet=new HystrixMetricsStreamServlet();
+        ServletRegistrationBean registrationBean=new ServletRegistrationBean(streamServlet);
+        registrationBean.setLoadOnStartup(1);
+        registrationBean.addUrlMappings("/hystrix.stream");
+        registrationBean.setName("HystrixMetricsStreamServlet");
+        return registrationBean;
+		
+监控地址：http://localhost:8001/hystrix.stream
+
+实心圆：共有两种含义，它通过颜色的变化代表了实例的健康程度，它的健康度从绿色<黄色<橙色<红色递减。该实心圆除了颜色的变化之外，它的大小也会根据实例的请求流量发生变化，流量越大该实心圆就越大，所以通过该实心圆的展示，就可以在大量的实例中快速的发现故障实例和高压力实例
+
+
+服务网关-gateway 异步非阻塞模型上开发的
+核心逻辑：路由转发+执行过滤器链
+	网关路由配置，有两种方式：yml
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      routes:   #路由
+        - id: payment_routh   #payment_route #路由的id，没有固定规定但要求唯一，建议配合服务名
+          uri: http://localhost:8001  #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/get/**  #断言，路径相同匹配的进行路由
+        - id: payment_routh2   #payment_route2 #路由的id，没有固定规定但要求唯一，建议配合服务名
+          uri: http://localhost:8001  #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/lb/**  #断言，路径相同匹配的进行路由
+	
+	另一种方式在代码中注入RouteLocator的Bean
+
+predicates:
+  - Path=/payment/get/**  #断言，路径相同匹配的进行路由
+  #设置多少时间以后才生效 After多少时间之后生效，Before多少时间之前生效，Between多少时间之间生效
+  - After=2021-04-16T15:55:57.310+08:00[Asia/Shanghai]
+# - Before=2021-04-16T15:55:57.310+08:00[Asia/Shanghai]
+# - Between=2021-04-16T15:55:57.310+08:00[Asia/Shanghai],2021-04-16T16:55:57.310+08:00[Asia/Shanghai]
+  - Cookie=username,zzyy	
+  通过cmd中curl带cookie访问方法
+curl http://localhost:9527/payment/get/31 --cookie "username=zzyy"
+
+过滤器：
+自定义过滤器
+	
+	
+	
+服务配置SpringCloud Config
+配置服务器为各个不同微服务应用的所有环境提供了一个中心化的外部配置
+分为服务端和客户端
+	服务端用来获取配置信息，加密/解密信息等访问
+	客户端是通过指定的配置中心来管理应用资源，以及与业务相关的配置内容
+在C:\Windows\System32\drivers\etc\hosts文件最后面加入127.0.0.1 config-3344.com
+访问地址
+http://config-3344.com:3344/master/config-test.yml
+
+/{name}-{profiles}.yml
+/{label}-{name}-{profiles}.yml
+label: 分支
+name: 服务名
+profiles: 环境{dev/test/prod}
+
+
+创建客户端：3355
+application.yml是用户级的资源配置项
+bootstrap.yml是系统级的，优先级更加高
+SpringCloud会创建一个“Bootstrap Context”，作为spring应用的“Application Context”的父上下文，初始化的时候，“Bootstrap Context”负责从外部源加载配置属性并解析配置。这两个上下文共享一个从外部获取的“Environment”。
+
+“Bootstrap”属性有高优先级，默认情况下，它们不会被本地配置覆盖。“Bootstrap context”和“Application Context”有着不同的约定，所以新增了一个“bootstrap.yml”文件，保证“Bootstrap Context”和“Application Context”配置的分离
+
+要将Client模块下的application.yml文件改为bootstrap.yml这是很关键的，因为bootstrap.yml是比application.yml先加载的，bootstrap.yml优先级高于application.yml
+
+
+分布式配置刷新问题
+
+手动版的配置刷新
+|||||||||
+3344，ConfigServer配置中心立刻响应
+3355，ConfigClient客户端没有任何响应
+3355没有变化除非自己重启或者重新加载
+configclient动态刷新配置
+	在bootstrap.yml中添加
+#暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+在controller添加注解
+@RefreshScope
+
+需要运维人员发送post请求刷新3355
+curl -X POST "http://localhost:3355/actuator/refresh"
+避免了服务重启
+		
+		
+		
+动态版的刷新	
+		
+springcloud Bus消息总线（对config的加强）
+bus支持两种消息代理：RabbitMQ和Kafka
+配置服务端消息总线的支持3344
+<!--添加消息总线RabbitMQ支持-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+		
+#rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+	
+#rabbitmq相关配置，暴露bus刷新配置的端点
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
+
+配置客户端消息总线的支持3355以及3366
+<!--添加消息总线RabbitMQ支持-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+		
+#rabbitmq相关配置 15672是web管理界面，5672是mq访问的端口
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+	
+
+一次修改，广播通知，处处生效，
+需要运维人员发送post请求刷新3344  服务端
+curl -X POST "http://localhost:3344/actuator/bus-refresh"
+客户端3355以及3366都同步刷新
+
+Springcloud Bus消息总线定点动态刷新
+通知其中一部分
+公式：http://localhost:配置中心的端口号/actuator/bus-refresh/{destination}
+/bus/refresh请求不再发送到具体的服务实例上，而是发送给config server并通过destination参数类指定需要更新配置的服务或实例
+curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:3355"  
+config-client:3355微服务加端口号
+
+
+
+SpringCloud Stream消息驱动
+消息中间件MQ
+	ActiveMQ
+	RabbitMQ
+	RocketMQ
+	Kafka
+
+通过定义绑定器Binder作为中间层，实现了应用程序与消息中间件细节之间的隔离
+Binder			很方便的连接中间件，屏蔽差异
+Channel			通道，是队列Queue的一种抽象，在消息通讯系统中就是实现存储和转发的媒介，通过Channel对队列进行配置
+Source和Sink	简单的可理解为参照对象是Spring Cloud Stream自身，从Stream发布消息就是输出，接受消息就是输入
+
+
+组成			说明
+Middleware		中间件，目前只支持RabbitMQ和Kafka
+Binder			Binder是应用与消息中间件之间的封装，目前实行了Kafka和RabbitMQ的Binder，通过Binder可以很方便的连接中间件，可以动态的改变消息类型(对应于Kafka的topic，RabbitMQ的exchange)，这些都可以通过配置文件来实现
+@Input			注解标识输入通道，通过该输入通道接收到的消息进入应用程序
+@Output			注解标识输出通道，发布的消息将通过该通道离开应用程序
+@StreamListener	监听队列，用于消费者的队列的消息接收
+@EnableBinding	指信道channel和exchange绑定在一起
+
+
+目前是8802和8803同时收到了，存在重复消费问题
+可以使用Stream中的消费分组来解决：
+	不同的组可以全面消费的（重复消费），同一组内会发生竞争关系，只是其中一个可以消费
+默认分组group是不同的，组流水号不一样，被认为不同组，可以消费
+
+自定义配置分组
+自定义配置分为同一个组，解决重复消费问题
+
+8802/8803都变成不同组，重复消费
+group: demoA
+group：demoB
+
+8802/8803都变成同组，不重复消费
+group: demo
+实现了轮询分组，每次只有一个消费者，接收到消息，这样避免了重复消费
+
+Stream之持久化，添加group以后，重启服务也会收到未消费，未收到的消息，获取到
+
+
+
+
+SpringCloud Sleuth分布式请求链路追踪
+zipkin负责链路展现
+访问地址：localhost:9411
+Trace:类似于树结构的Span集合，表示一条调用链路，存在唯一标识
+span：表示调用链路来源，通俗的理解span就是一次请求信息
+
+
+https://spring-cloud-alibaba-group.github.io/github-pages/hoxton/en-us/index.html
+SpringCloud Alibaba
+服务限流降级：默认支持Servlet、Feign、RestTemplate、Dubbo和RocketMQ限流降级功能的接入，可以在运行时通过控制台实时修改限流降级规则，还支持查看限流降级Metrics监控。
+服务注册与发现：适配SpringCloud服务注册与发现标准，默认继承了Ribbon的支持
+分布式配置管理：支持分布式系统中的外部化配置，配置更改时自动刷新
+消息驱动能力：基于SpringCloud Stream为微服务应用构建消息驱动能力
+阿里云对象存储：阿里云提供的海量、安全、低成本、高可靠的云存储服务，支持在任何应用、任何时间、任何地点存储和访问任意类型的数据
+分布式任务调度：提供秒级、精准、高可靠、高可用的定时（基于Cron表达式）任何调度服务。同时提供分布式的任务执行模型，如网格任务，网格任务支持海量子任务均匀分配到所有Worker（schedulerx-client）上执行
+
+中文文档
+https://github.com/alibaba/spring-cloud-alibaba/blob/master/README-zh.md
+
+
+Nacos服务注册和配置中心
+Nacos= Eureka+Config+Bus  等价于
+nacos服务注册中心
+<!--nacos-discovery-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+启动nacos服务，从bin目录启动--》访问地址http://localhost:8848/nacos
+name/password	nacos
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #配置nacos地址
+		
+
+@Configuration
+public class ApplicationContextConfig {
+    @Bean
+    @LoadBalanced//结合Ribbon做负载均衡必须要该注解
+    public RestTemplate getRestTemplate(){
+        return new RestTemplate();
+    }
+}
+
+nacos自带负载均衡，整合了netfix-ribbon
+
+组件名 		语言 cap 			服务健康检查 对外暴露接口 springcloud集成
+Eureka 		java ap(高可用) 	  可配支持 		http 		已集成
+Consul 		go   cp(数据一致) 		 支持         http/dns     已集成
+Zookeeper   java cp   				 支持			客户端			已集成
+Nacos			 ap、cp(可切换)		 支持		http/dns/udp
+
+Nacos支持AP和CP模式的切换
+c是所有节点在同一时间看到的数据是一致的，而A的定义是所有的请求都会收到响应
+
+何时选择使用何种模式？
+一般来说
+如果不需要存储服务级别的信息且服务是通过nacos-client注册，并能够保持心跳上报，那么就可以选择AP模式，当前主流的服务如SpringCloud和Dubbo服务，都适用于AP模式，AP模式为了服务的可能性而减弱了一致性，因此AP模式下只支持注册临时实例
+
+如果需要在服务级别编辑或者存储配置信息，那么CP是必须，K8S服务和DNS服务则适用于CP模式，CP模式下则支持注册持久化实例，此时则是以Raft协议为集群运行模式，该模式下注册实例之前必须先注册服务，如果服务不存在，则会返回错误
+
+curl -X PUT '$NACOS_SERVER:8848/nacos/v1/ns/operator/switches?entry=serverMode&value=CP'
+
+nacos服务配置中心     自带动态刷新
+<!--nacos-config-->
+        <dependency>
+    <groupId>com.alibaba.cloud</groupId>
+    <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+</dependency>
+
+基础配置:cloudalibaba-config-nacos-client3377
+|||||||||||||||||
+两个配置文件：
+	application.yml、bootsrap.yml
+
+nacos同springcloud-config一样，在项目初始化时，要保证先从配置中心进行配置拉取，拉取配置之后，才能保证项目的正常启动。
+
+springboot中配置文件的加载是存在优先级顺序的，bootstrap优先级高于application
+
+Data ID
+#${spring.application.yml.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
+# nacos-config-client-dev.yaml
+
+分类配置：
+|||||||||||||||||
+问题1：
+实际开发中，通常一个系统会准备
+	dev开发环境
+	test测试环境
+	prod生产环境
+	如何保证指定环境启动时服务能正常读取到Nacos上相应环境的配置文件呢
+	
+问题2：
+一个大型分布式微服务系统会有很多微服务子项目，每个微服务项目又都会有相应的开发环境、测试环境、预发环境、正式环境。。。。。
+那怎么对这些微服务配置进行管理呢？
+
+Nacos的图形化管理界面
+	Namespace（命名空间）+Group+Data ID三者关系
+默认情况：
+	Namespace=public,Group=DEFAULT_GROUP,默认Cluster是DEFAULT
+
+Data ID分组方式  application.yml
+spring:
+  profiles:
+#    active: test #表示测试环境
+#    active: dev #表示开发环境
+    active: info #表示开发环境
+
+Group 分组方式   bootsrap.yml
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #nacos服务注册中心地址
+      config:
+        server-addr: localhost:8848 #nacos服务配置中心地址
+        file-extension: yaml #指定对应nacos的yaml格式的配置
+#        group: TEST_GROUP #对应nacos的Group名
+        group: DEV_GROUP #对应nacos的Group名
+
+Namespace（命名空间）   
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #nacos服务注册中心地址
+      config:
+        server-addr: localhost:8848 #nacos服务配置中心地址
+        file-extension: yaml #指定对应nacos的yaml格式的配置
+#        group: TEST_GROUP #对应nacos的Group名
+        group: DEV_GROUP #对应nacos的Group名
+        namespace: 361d9311-041d-4307-97a7-aae8fabe825f #dev命名空间id
+		
+
+nacos集群和持久化配置(重要)  linux环境
+nacos默认自带的是嵌入式数据库derby，
+
+win环境
+|||||||
+derby到mysql切换：
+	nacos-server-1.1.4\nacos\conf目录下找到sql脚本  nacos-mysql.sql
+	nacos-server-1.1.4\nacos\conf目录下找到application.properties
+	
+#*************** Config Module Related Configurations ***************#
+### If use MySQL as datasource:
+spring.datasource.platform=mysql
+
+### Count of DB:
+db.num=1
+
+### Connect URL of DB:
+db.url.0=jdbc:mysql://127.0.0.1:3306/nacos_config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+db.user.0=root
+db.password.0=1234
+	
+|||||||重启nacos即可
+
+
+linux环境
+|||||||||||
+预计需要，1个Nginx+3nacos注册中心+1个mysql
+复制到cd /opt目录下
+解压 tar -zxvf nacos-server-1.4.1.tar.gz 
+创建文件夹  mkdir mynacos
+复制 cp -r nacos mynacos/
+安装完成
+备份启动文件 cp startup.sh startup.sh.bk
+
+安装mysql
+derby到mysql切换：
+/opt/mynacos/nacos/conf目录下找到sql脚本  nacos-mysql.sql
+nacos-server-1.1.4\nacos\conf目录下找到application.properties
+#*************** Config Module Related Configurations ***************#
+### If use MySQL as datasource:
+spring.datasource.platform=mysql
+
+### Count of DB:
+db.num=1
+
+### Connect URL of DB:
+db.url.0=jdbc:mysql://127.0.0.1:3306/nacos_config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+db.user.0=root
+db.password.0=1234
+
+nacos集群的配置
+	复制出 cluster.conf.example 		cluster.conf
+	
+命令hostname -I   查看ip 192.168.248.128
+vi cluster.conf
+127.0.0.1:3333
+127.0.0.1:4444
+127.0.0.1:5555
+		
+编辑Nacos的启动脚本startup.sh使它能够接受不同的启动端口
+     59 while getopts ":m:f:s:c:ps:p:" opt
+     60 do
+     61     case $opt in
+     62         m)
+     63             MODE=$OPTARG;;
+     64         f)
+     65             FUNCTION_MODE=$OPTARG;;
+     66         s)
+     67             SERVER=$OPTARG;;
+     68         c)
+     69             MEMBER_LIST=$OPTARG;;
+     70         ps)
+     71             EMBEDDED_STORAGE=$OPTARG;;
+     72         p)
+     73             PORT=$OPTARG;;
+     74         ?)
+     75         echo "Unknown parameter"
+     76         exit 1;;
+     77     esac
+     78 done
+	 
+	 143 nohup $JAVA -Dserver.port=${PORT} ${JAVA_OPT} nacos.nacos >> ${BASE_DIR}/logs/start.out 2>&1 &
+	 
+执行方式 ./startup.sh -p 3333
+执行方式 ./startup.sh -p 4444
+执行方式 ./startup.sh -p 5555
+
+
+安装java8
+安装Nginx的配置，由它作为负载均衡器
+修改nginx：
+/usr/local/nginx/conf
+备份	cp nginx.conf nginx.conf.bk
+vi nginx.conf
+修改地方
+
+#gzip  on;
+
+    upstream cluster{
+        server 127.0.0.1:3333;
+        server 127.0.0.1:4444;
+        server 127.0.0.1:5555;
+    }   
+
+    server {
+        listen       1111;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+           # root   html;
+           # index  index.html index.htm;
+           proxy_pass http://cluster;
+        }
+		
+		
+启动nacos集群,复制三个nacos
+/opt/mynacos/nacos/bin
+	./start.sh -p 3333
+/opt/mynacos/nacos1/bin
+	./start.sh -p 4444
+/opt/mynacos/nacos2/bin
+	./start.sh -p 5555
+	
+	ps -ef|grep nacos|grep -v grep|wc -l 查询nacos运行个数
+	
+启动nginx
+./nginx -c /usr/local/nginx/conf/nginx.conf
+访问地址	http://192.168.248.128:1111/nacos
+
+nacos做配置中心使用yaml的时候，必须注意事项，
+	bootstrap.yml中这里必须写成  file-extension: yaml #指定对应nacos的yaml格式的配置
+	在nacos写文件的时候，:后面必须打一个空格，否则找不到
+	
+
+
+SpringCloud Sentinel微服务的流量控制、熔断降级组件
+通过cmd启动Sentinel，8080端口不能被占用，
+	java -jar sentinel-dashboard-1.7.0.jar
+访问地址http://localhost:8080/
+user password ：sentinel
+
+流控规则模块的使用：
+		针对来源   阈值类型     单机阈值	流控模式	流控效果	关联资源	预热时长	超时时间
+/testA	default，QPS每秒访问数，   1，		直接，		快速失败  										//表示1秒钟内查询1次就OK，若超过次数1，就直接-快速失败，报默认错误（Blocked by Sentinel (flow limiting)）
+		default		线程数			1		直接			\
+		default，QPS每秒访问数，    1		关联		快速失败	/testB    							//表述1秒内查询/testA超过1次以后，/testB访问报错，（Blocked by Sentinel (flow limiting)）
+/testB  default，QPS每秒访问数，    10		直接		WarmUp						5秒					//表述，默认coldFactor为3，即请求OPS从(threshold/3)开始，经过多少预热时长才逐渐升至设定的QPS阈值，系统初始化的阈值为10/3 约等于3，即阈值刚开始为3，然后过了5秒后阈值才慢慢升高恢复到10
+		default，QPS每秒访问数，    1		直接		排队等待							20000毫秒	//表述，匀速排队，让请求以均匀的速度通过，阈值类型必须设成QPS，否则无效，/testB每秒1次请求，超过的话就排队等待，等待的超时时间为20000毫秒
+		
+		
+降级规则的使用：
+Sentinel的断路器是没有半开状态的(hystrix有)
+QPS>=5(一秒钟访问数) && RT或者异常比例或者异常
+	降级策略	阈值			时间窗口
+	RT			200毫秒			1秒		//一秒大于5个线程，我们希望200毫秒处理完本次任务，如果超过200毫秒还没处理完，在未来1秒钟的时间窗口内，断路器打开，微服务不可用，1秒后自动恢复
+	异常比例	0.2				3秒		//一秒钟异常比例超过20%且一秒钟大于5个QPS，3秒后恢复正常
+	异常数		5				61秒	//一分钟之内异常数达到五以后，熔断，61秒之后恢复正常
+	
+
+热点规则
+热点key限流
+@SentinelResource兜底注解
+	@GetMapping("/testHotKey")
+    @SentinelResource(value = "testHotKey",blockHandler = "deal_testHotKey")//value随便取，只要唯一;blockHandler兜底方法名
+    public String testHotKey(@RequestParam(value = "p1",required = false)String po1,
+                             //1。value：请求中传入参数的名称，如果不设置后台接口的value值，则会默认为该变量名。
+                             // 比如上图中第一个参数如果不设置value="p1",则前端传入的参数名必须为po1,否则在后台接口中po1将接收不到对应的数据
+                             // 2。required：该参数是否为必传项。默认是true，表示请求中一定要传入对应的参数，否则会报404错误，
+                             // 如果设置为false时，当请求中没有此参数，将会默认为null,而对于基本数据类型的变量，则必须有值，
+                             // 这时会抛出空指针异常。如果允许空值，则接口中变量需要使用包装类来声明。
+                             @RequestParam(value = "p2",required = false)String po2){
+        return "----testHotKey";
+    }
+    public String deal_testHotKey(String po1, String po2, BlockedException e){//BlockException必须接收
+        return "-----deal_testHotKey";//sentinel系统默认的提示：Blocked by Sentinel (flow limiting)
+    }
+	
+	资源名			参数索引(默认从零开始)	流控模式	阈值					参数类型				参数值		限流阈值
+	testHotKey			0						QPS		1（1秒一次QPS访问量）													//testHotKey这个资源，第一个参数，每秒只能访问一次，一秒内多次即生效
+	testHotKey			0						QPS		1（1秒一次QPS访问量）	java.lang.String			5			200		//testHotKey这个资源，第一个参数，每秒只能访问一次，一秒内多次即生效，当第一个参数等于5的时候，每秒可以访问200次
+	
+	@SentinelResource(value = "testHotKey",blockHandler = "deal_testHotKey")注解只管sentinel界面配置的兜底，业务代码类的报错(RuntimeException)，不管
+	
+系统规则
+对整个范围生效，不大合适
+
+
+
+讲解@SentinelResource  （相当于从HysitrixCommand到SentinelResource）
+	@GetMapping("/byResource")
+    @SentinelResource(value = "byResource",blockHandler = "handleException")
+写了兜底方法，sentinel配置中资源路径写byResource
+
+	@GetMapping("/rateLimit/byUrl")
+    @SentinelResource(value = "byUrl")
+没写兜底方法，sentinel配置中资源路径写/rateLimit/byUrl
+
+
+和Hysitrix一样，业务代码解耦，耦合度太高
+@SentinelResource(value = "customerBlockHandler",
+            blockHandlerClass = CustomerBlockHandler.class,//指定兜底类
+            blockHandler = "HandlerException2")//指定兜底类下面的具体某个方法
+
+
+sentinel服务熔断功能
+sentinel整合ribbon+fallback
+//@SentinelResource(value = "fallback",fallback = "handlerFallback") //fallback只负责业务异常
+//@SentinelResource(value = "fallback",blockHandler = "blockHandler") //blockHandler只负责sentinel控制台配置违规
+//@SentinelResource(value = "fallback", fallback = "handlerFallback", blockHandler = "blockHandler")//如果进入限制就进入blockHandler，没有限制则进入fallback
+//@SentinelResource(value = "fallback", fallback = "handlerFallback", blockHandler = "blockHandler",exceptionsToIgnore = {IllegalArgumentException.class})//exceptionsToIgnore(忽略某些异常)取掉某个异常的兜底，除此异常以外，所有的异常都走兜底，如果达到限制，则走blockHandler
+        
+	fallback管运行异常
+	blockHandler管配置违规
+	以上会和业务逻辑代码耦合
+	
+
+
+sentinel整合ribbon+openFeign+fallback实现综合的熔断降级等等
+通过openFeign当服务端宕机以后进入兜底方法
+
+
+Sentinel的配制规则持久化
+没有配制持久化，当服务重启，配置则消失
+<!--alibaba sentinel-datasource-nacos sentinel配置文件持久化到nacos数据库(mysql)-->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+        </dependency>
+将限流配置规则持久化进Nacos保存，只要刷新8401某个rest地址，sentinel控制台的流控规则就能看到，只要Nacos里面的配置不删除，针对8401上Sentinel上的流控规则持续有效
+
+
+application.yml
+|||||||||||||||
+server:
+  port: 8401
+
+spring:
+  application:
+    name: cloudalibaba-sentinel-service
+  cloud:
+    nacos:
+      discovery:
+        #nacos服务注册中心地址
+        server-addr: 192.168.248.128:1111
+      config:
+        server-addr: 192.168.248.128:1111
+    sentinel:
+      transport:
+        #配置sentinel dashboard地址
+        dashboard: localhost:8080
+        #默认8719端口，假如被占用会自动从8719开始依次+1扫描，直至找到未被占用的端口
+        port: 8719
+      datasource:
+        ds1:
+          nacos:
+#           server-addr: localhost:8848
+            server-addr: 192.168.248.128:1111  #nacos配置中心
+            dataId: ${spring.application.name}
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+
+#监控图形化等
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+|||||||||||||||||||||||||||||||
+
+手动到nacos配置中心配置cloudalibaba-sentinel-service    json
+[
+    {
+         "resource": "/rateLimit/byUrl",	资源名称
+         "limitApp": "default",				来源应用
+         "grade":   1,						阈值类型，0表示线程数，1表示QPS
+         "count":   1,						单机阈值
+         "strategy": 0,						流控模式，0表示直接，1表示关联，2表示链路
+         "controlBehavior": 0,				流控效果，0表示快速失败，1表述Warm Up，2表示排队等待
+         "clusterMode": false    			是否集群
+    }
+]
+
+
+
+	
+SpringCloud Alibaba Seata处理分布式事务
+Seata是一款开源的分布式事务解决方案，致力于在微服务架构下提供高性能和简单易用的分布式事务服务
+1+3的套件组成，1全局唯一的事物id
+					TC (Transaction Coordinator) - 事务协调者，维护全局和分支事务的状态，驱动全局事务提交或回滚。
+	三大组件概念：	TM (Transaction Manager) - 事务管理器，定义全局事务的范围：开始全局事务、提交或回滚全局事务。
+					RM (Resource Manager) - 资源管理器，管理分支事务处理的资源，与TC交谈以注册分支事务和报告分支事务的状态，并驱动分支事务提交或回滚。
+					
+修改文件	
+一、
+复制：D:\Desktop\springcloud工具\环境开发\seata\seata\conf\file.conf 备份
+修改file.conf
+	主要修改：自定义事务组名称+事务日志存储模式为db+数据库连接信息
+	service {中将：
+	vgroup_mapping.my_test_tx_group = "default"修改为
+	vgroup_mapping.fsp_tx_group = "default"	随便起的名字
+	
+	store {中将：
+	mode = "file"修改为
+	mode = "db"
+	
+	db {中将：
+	url = "jdbc:mysql://127.0.0.1:3306/seata"
+    user = "mysql"
+    password = "mysql"修改为自己的
+	url = "jdbc:mysql://192.168.248.128:3306/seata"
+    user = "root"
+    password = "1234"
+	
+二、
+在数据库新建库seata
+执行数据库sql脚本，在D:\Desktop\springcloud工具\环境开发\seata\seata\conf\db_store.sql
+
+三、
+修改D:\Desktop\springcloud工具\环境开发\seata\seata\conf\registry.conf配置文件，先备份
+	registry {中将
+	type = "file"修改为
+	type = "nacos"
+	
+	nacos {中将
+    serverAddr = "localhost"修改为
+	serverAddr = "192.168.248.128:1111" #nacos地址，本地是集群，注册到ngnix中
+	
+四、
+先启动nacos后seat
+在D:\Desktop\springcloud工具\环境开发\seata\seata\bin启动seata-server.bat
+看到   INFO [main]io.seata.common.loader.EnhancedServiceLoader.loadFile:236 -load RegistryProvider[Nacos] extension by class[io.seata.discovery.registry.nacos.NacosRegistryProvider]
+即成功启动
+
+五、
+在每一个库里，创建一张表
+脚本在D:\Desktop\springcloud工具\环境开发\seata\seata\conf\db_undo_log.sql
+在需要使用seat的所有数据库执行一次
+
+
+模拟故障：AccountServiceImpl添加超时
+	当库存和账户余额扣减后，订单状态并没有设置为已经完成，没有从零改为1
+	而且由于feign的重试机制，账户余额还有可能被多次扣减
+	
+只需要在调用服务的客户端加上@GlobalTransactional注解，即可全局回滚，在impl类入口处方法上添加
+	//name随便取，唯一性，rollbackFor，选择回滚异常类型，当前所有异常回滚
+    @GlobalTransactional(name = "fsp-create-order",rollbackFor = Exception.class)//全局事务回滚
+	public void create(Order order) {
+   
+	
+
+	
+	
+	
+	
+	
